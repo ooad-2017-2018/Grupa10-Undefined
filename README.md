@@ -52,6 +52,7 @@ Korisnik odabire pjesmu koju zeli da upload-uje, Nakon cega pise naziv pjesme, t
 - Mogucnost ocjenjivanja pjesama
 - Mogucnost ostavljanja komentara nad pjesmama
 - Mogucnost pregleda event-a drugih korisnika
+- Mogucnost reportanja korisnika / pjesama
 
 **Obicni reistrovani korisnici**
 - Mogucnost nadograđivanja računa na VIP
