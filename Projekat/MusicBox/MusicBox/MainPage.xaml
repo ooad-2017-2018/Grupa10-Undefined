@@ -7,60 +7,59 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Left" Width="1500">
-
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Wide">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1000"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="tbl1.(Grid.Column)" Value="1"/>
-                        <Setter Target="tbl2.(Grid.Column)" Value="1"/>
-                        <Setter Target="tbo1.(Grid.Column)" Value="1"/>
-                        <Setter Target="tbo2.(Grid.Column)" Value="1"/>
-                        <Setter Target="bt1.(Grid.Column)" Value="1"/>
-                        <Setter Target="bt2.(Grid.Column)" Value="1"/>
-                        <Setter Target="bt3.(Grid.Column)" Value="1"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState x:Name="Narrow">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="tbl1.(Grid.Column)" Value="0"/>
-                        <Setter Target="tbl2.(Grid.Column)" Value="0"/>
-                        <Setter Target="tbo1.(Grid.Column)" Value="0"/>
-                        <Setter Target="tbo2.(Grid.Column)" Value="0"/>
-                        <Setter Target="bt1.(Grid.Column)" Value="0"/>
-                        <Setter Target="bt2.(Grid.Column)" Value="0"/>
-                        <Setter Target="bt3.(Grid.Column)" Value="0"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
-        <TextBlock x:Name="tbl1" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="50,60,-206,0" Text="Username:" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="tbl2" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="50,102,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
-        <TextBox x:Name="tbo1" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="211,60,0,0" Text="" VerticalAlignment="Top" Width="263"/>
-        <TextBox x:Name="tbo2" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="211,102,0,0" Text="" VerticalAlignment="Top" Width="263"/>
-        <Button x:Name="bt1" Grid.Column="1" Content="Login" HorizontalAlignment="Left" Height="45" Margin="50,176,-474,0" VerticalAlignment="Top" Width="424" Grid.ColumnSpan="3"/>
-        <Button x:Name="bt2" Grid.Column="1"  Content="Login as guest" HorizontalAlignment="Left" Height="45" Margin="50,249,-474,0" VerticalAlignment="Top" Width="424" Grid.ColumnSpan="3"/>
-        <Button x:Name="bt3" Grid.Column="1" Content="Registration" HorizontalAlignment="Left" Height="45" Margin="50,537,-474,0" VerticalAlignment="Top" Width="424" Grid.ColumnSpan="3"/>
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel
+                Grid.Row="0"  
+                Orientation="Horizontal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+            <TextBlock  Text="Username: " FontSize="25" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel
+                Grid.Row="1"  
+                Orientation="Horizontal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel
+                Grid.Row="2"  
+                Orientation="Horizontal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+            <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+        </StackPanel>
+        <StackPanel
+                Grid.Row="3"  
+                Orientation="Horizontal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+            <Button x:Name="loginAsGuestButton" Content="Login as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+        </StackPanel>
+        
+        <StackPanel
+                Grid.Row="5"  
+                Orientation="Horizontal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="{ThemeResource AppBarBackgroundThemeBrush}">
+            <Image Source="Assets/slika.png"/>
+        </StackPanel>
     </Grid>
 </Page>

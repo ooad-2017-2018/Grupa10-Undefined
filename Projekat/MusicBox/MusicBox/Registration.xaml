@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="MusicBox.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"  
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+            <TextBlock  FontSize="25" Text="Name: " Margin="0,0,20,0" Width="200" />
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="imeTextBox" Background="LightGray"/>
+        </StackPanel>
+        <Button x:Name="nazadButton" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Back" Grid.Row="0"/>
+        <StackPanel Grid.Row="1"  
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
+            <TextBlock  FontSize="25" Text="Last name: " Width="200" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="prezimeTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2"  
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
+            <TextBlock  FontSize="25" Text="Username: " Width="200" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3"  
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    RenderTransformOrigin="0.465,0.654">
+            <TextBlock  FontSize="25" Text="Password: " Width="200" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4"  
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
+            <TextBlock  FontSize="25" Text="Confirm Password: " Width="200" Margin="0,0,20,0"/>
+            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="confirmPasswordTextBox" Background="LightGray"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
+            <RichTextBlock FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="usloviKoristenjaRichTextBox" Foreground="LightGray"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654" >
+            <CheckBox x:Name="usloviKoristenjaCheckBox" Width="40"/>
+            <TextBlock Text="I Agree To The Terms And Conditions" Width="460" FontSize="25"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
+            <Button x:Name="registrujSeButton" Width="100" Height="30" Content="Register" Background="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>
