@@ -22,29 +22,29 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
             <TextBlock  Text="Username: " FontSize="25" Margin="0,0,20,0"/>
-            <TextBox x:ConnectionId='5' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox" Background="LightGray"/>
+            <TextBox x:ConnectionId='5' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="1"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0"/>
-            <TextBox x:ConnectionId='4' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordTextBox" Background="LightGray"/>
+            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>
+            <TextBox x:ConnectionId='4' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordTextBox"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="2"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:ConnectionId='3' x:Name="loginButton" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+            <Button x:ConnectionId='3' x:Name="loginButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="3"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:ConnectionId='2' x:Name="loginAsGuestButton" Content="Login as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+            <Button x:ConnectionId='2' x:Name="loginAsGuestButton" Content="Log in as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
         </StackPanel>
         
         <StackPanel
@@ -52,7 +52,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:ConnectionId='1' x:Name="registerButton" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="440"/>
+            <Button x:ConnectionId='1' x:Name="registerButton" Content="Registration" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
         </StackPanel>
         <StackPanel Grid.Row="4"
                     Orientation="Horizontal"
