@@ -25569,34 +25569,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emir\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+    "C:\\Users\\molte\\.nuget\\packages\\": {},
+    "C:\\Program Files\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fakultet\\OOAD\\Backup\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "projectUniqueName": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
       "projectName": "MusicBox",
-      "projectPath": "D:\\Fakultet\\OOAD\\Backup\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
-      "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
-      "outputPath": "D:\\Fakultet\\OOAD\\Backup\\Projekat\\MusicBox\\MusicBox\\obj\\",
+      "projectPath": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "packagesPath": "C:\\Users\\molte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\Projekat\\MusicBox\\MusicBox\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\molte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.10240"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

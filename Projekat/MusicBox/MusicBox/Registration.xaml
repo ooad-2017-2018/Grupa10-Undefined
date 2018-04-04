@@ -58,7 +58,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
-            <RichTextBlock FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="usloviKoristenjaRichTextBox" Foreground="LightGray"/>
+            <RichTextBlock Foreground="LightBlue"  Width="500" Height="300" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="usloviKoristenjaRichTextBox" />
         </StackPanel>
         <StackPanel Grid.Row="6"
                     Orientation="Horizontal"
