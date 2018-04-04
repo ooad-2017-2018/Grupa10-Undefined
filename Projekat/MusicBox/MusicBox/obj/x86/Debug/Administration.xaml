@@ -59,7 +59,7 @@
             </ListView>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2" Background="Red" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:ConnectionId='3' x:Name="removeUserButton" Content="Bann" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='3' x:Name="removeUserButton" Content="Remove user" Width="109" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBox x:ConnectionId='1' x:Name="duzinaBannaTextBox" FontSize="15" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
