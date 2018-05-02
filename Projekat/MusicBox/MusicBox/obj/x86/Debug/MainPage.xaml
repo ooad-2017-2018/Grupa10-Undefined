@@ -5,7 +5,12 @@
     xmlns:local="using:MusicBox"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local1="using:MusicBox.ViewModels"
     mc:Ignorable="d">
+
+    <Page.DataContext>
+        <local1:LoginViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -22,22 +27,22 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
             <TextBlock  Text="Username: " FontSize="25" Margin="0,0,20,0"/>
-            <TextBox x:ConnectionId='5' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox"/>
+            <TextBox x:ConnectionId='5' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox" Text="{Binding Username}"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="1"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>
-            <TextBox x:ConnectionId='4' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordTextBox"/>
+            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>           
+            <PasswordBox x:ConnectionId='4'  FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordBox"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="2"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:ConnectionId='3' x:Name="loginButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
+            <Button x:ConnectionId='3' x:Name="loginButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding LoginButtonClicked}" CommandParameter="{Binding ElementName=passwordBox}"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="3"  

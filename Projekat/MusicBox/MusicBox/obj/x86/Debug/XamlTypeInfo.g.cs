@@ -132,19 +132,29 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[10];
             _typeNameTable[0] = "MusicBox.Administration";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "MusicBox.BlankPage1";
-            _typeNameTable[4] = "MusicBox.MainPage";
+            _typeNameTable[4] = "MusicBox.ViewModels.LoginViewModel";
+            _typeNameTable[5] = "Object";
+            _typeNameTable[6] = "System.Windows.Input.ICommand";
+            _typeNameTable[7] = "MusicBox.Models.User";
+            _typeNameTable[8] = "String";
+            _typeNameTable[9] = "MusicBox.MainPage";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[10];
             _typeTable[0] = typeof(global::MusicBox.Administration);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::MusicBox.BlankPage1);
-            _typeTable[4] = typeof(global::MusicBox.MainPage);
+            _typeTable[4] = typeof(global::MusicBox.ViewModels.LoginViewModel);
+            _typeTable[5] = typeof(global::System.Object);
+            _typeTable[6] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[7] = typeof(global::MusicBox.Models.User);
+            _typeTable[8] = typeof(global::System.String);
+            _typeTable[9] = typeof(global::MusicBox.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,7 +191,8 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         private object Activate_0_Administration() { return new global::MusicBox.Administration(); }
         private object Activate_3_BlankPage1() { return new global::MusicBox.BlankPage1(); }
-        private object Activate_4_MainPage() { return new global::MusicBox.MainPage(); }
+        private object Activate_4_LoginViewModel() { return new global::MusicBox.ViewModels.LoginViewModel(); }
+        private object Activate_9_MainPage() { return new global::MusicBox.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -215,9 +226,41 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  MusicBox.MainPage
+            case 4:   //  MusicBox.ViewModels.LoginViewModel
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_LoginViewModel;
+                userType.AddMemberName("LoginButtonClicked");
+                userType.AddMemberName("LoggedUser");
+                userType.AddMemberName("Username");
+                userType.AddMemberName("Password");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Object
+                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  System.Windows.Input.ICommand
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 7:   //  MusicBox.Models.User
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  String
+                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  MusicBox.MainPage
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_9_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -226,11 +269,74 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         }
 
 
+        private object get_0_LoginViewModel_LoginButtonClicked(object instance)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            return that.LoginButtonClicked;
+        }
+        private object get_1_LoginViewModel_LoggedUser(object instance)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            return that.LoggedUser;
+        }
+        private void set_1_LoginViewModel_LoggedUser(object instance, object Value)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            that.LoggedUser = (global::MusicBox.Models.User)Value;
+        }
+        private object get_2_LoginViewModel_Username(object instance)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            return that.Username;
+        }
+        private void set_2_LoginViewModel_Username(object instance, object Value)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            that.Username = (global::System.String)Value;
+        }
+        private object get_3_LoginViewModel_Password(object instance)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            return that.Password;
+        }
+        private void set_3_LoginViewModel_Password(object instance, object Value)
+        {
+            var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
+            that.Password = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::MusicBox.MusicBox_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "MusicBox.ViewModels.LoginViewModel.LoginButtonClicked":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LoginButtonClicked", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_0_LoginViewModel_LoginButtonClicked;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "MusicBox.ViewModels.LoginViewModel.LoggedUser":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LoggedUser", "MusicBox.Models.User");
+                xamlMember.Getter = get_1_LoginViewModel_LoggedUser;
+                xamlMember.Setter = set_1_LoginViewModel_LoggedUser;
+                break;
+            case "MusicBox.ViewModels.LoginViewModel.Username":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Username", "String");
+                xamlMember.Getter = get_2_LoginViewModel_Username;
+                xamlMember.Setter = set_2_LoginViewModel_Username;
+                break;
+            case "MusicBox.ViewModels.LoginViewModel.Password":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Password", "String");
+                xamlMember.Getter = get_3_LoginViewModel_Password;
+                xamlMember.Setter = set_3_LoginViewModel_Password;
+                break;
+            }
             return xamlMember;
         }
     }
