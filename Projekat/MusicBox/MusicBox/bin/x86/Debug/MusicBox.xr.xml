@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="RegistrationButtonClicked" />
+    <RootPropertyPathName Name="LoginGuestButtonClicked" />
     <RootPropertyPathName Name="LoginButtonClicked" />
     <RootPropertyPathName Name="Username" />
   </Roots.PropertyPathNames>
@@ -10,7 +12,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
@@ -97,7 +98,6 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="MusicBox.BlankPage1" />
-    <RootType FullName="MusicBox.ViewModels.LoginViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
     </RootType>

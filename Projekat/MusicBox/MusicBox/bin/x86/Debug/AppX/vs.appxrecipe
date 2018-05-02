@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AA71C2DAE88E3C400376278B63F86779B11A27F4882B13C28DA56F218EE1AB24</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E84D52A0C8B06969A43538B4D2922EF54142A3E23DF22E758CBE4672AEE07894</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d67d482b-5a74-4337-9027-1bac7acb39df_1.0.0.0_x86__vjn264m12454a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d67d482b-5a74-4337-9027-1bac7acb39df_vjn264m12454a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d67d482b-5a74-4337-9027-1bac7acb39df</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-02T01:02:01.306</Modified>
+      <Modified>2018-05-02T12:10:13.812</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.exe">
       <PackagePath>entrypoint\MusicBox.exe</PackagePath>
-      <Modified>2018-05-02T01:02:00.994</Modified>
+      <Modified>2018-05-02T12:10:13.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Emir\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard1.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -563,20 +563,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.xr.xml">
       <PackagePath>MusicBox.xr.xml</PackagePath>
-      <Modified>2018-05-02T01:01:36.986</Modified>
+      <Modified>2018-05-02T12:09:31.928</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2018-04-03T19:26:50.286</Modified>
+      <Modified>2017-09-28T16:28:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-02T01:01:37.503</Modified>
+      <Modified>2018-05-02T12:09:32.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\Workspace\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\MusicBox.exe">
       <PackagePath>MusicBox.exe</PackagePath>
-      <Modified>2018-05-02T01:02:01.303</Modified>
+      <Modified>2018-05-02T12:10:13.810</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

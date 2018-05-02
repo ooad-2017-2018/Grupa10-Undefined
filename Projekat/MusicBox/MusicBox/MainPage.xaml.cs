@@ -25,6 +25,7 @@ namespace MusicBox
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new LoginViewModel(new NavigationService());
         }
     }
 }

@@ -6,11 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local1="using:MusicBox.ViewModels"
-    mc:Ignorable="d">
-
-    <Page.DataContext>
-        <local1:LoginViewModel/>
-    </Page.DataContext>
+    mc:Ignorable="d">    
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -49,7 +45,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="loginAsGuestButton" Content="Log in as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
+            <Button x:Name="loginAsGuestButton" Content="Log in as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding LoginGuestButtonClicked}"/>
         </StackPanel>
 
         <StackPanel
@@ -57,7 +53,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440"/>
+            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding RegistrationButtonClicked}"/>
         </StackPanel>
         <StackPanel Grid.Row="4"
                     Orientation="Horizontal"
