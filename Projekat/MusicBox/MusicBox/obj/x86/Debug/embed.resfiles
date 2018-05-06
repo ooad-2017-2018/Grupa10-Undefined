@@ -1,4 +1,6 @@
-Administration.xbf
 App.xbf
 MainPage.xbf
 Registration.xbf
+SearchButton.xbf
+Views\Administration.xbf
+Views\Administration_v2.xbf

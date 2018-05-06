@@ -18,33 +18,33 @@ namespace MusicBox
         /// <summary>
         /// Connect()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void Connect(int connectionId, object target)
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // MainPage.xaml line 56
                 {
                     this.registerButton = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 2:
+            case 2: // MainPage.xaml line 48
                 {
                     this.loginAsGuestButton = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 3:
+            case 3: // MainPage.xaml line 41
                 {
                     this.loginButton = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 4:
+            case 4: // MainPage.xaml line 34
                 {
                     this.passwordBox = (global::Windows.UI.Xaml.Controls.PasswordBox)(target);
                 }
                 break;
-            case 5:
+            case 5: // MainPage.xaml line 26
                 {
                     this.usernameTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
@@ -55,7 +55,10 @@ namespace MusicBox
             this._contentLoaded = true;
         }
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
         {

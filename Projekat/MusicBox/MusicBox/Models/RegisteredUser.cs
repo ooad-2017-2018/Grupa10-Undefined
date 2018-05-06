@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +24,7 @@ namespace MusicBox.Models
         public string LastName { get => lastName; set => lastName = value; }
         public bool Banned { get => banned; set => banned = value; }
 
-        RegisteredUser(string username, string pw, string name, string lastname)
+        public RegisteredUser(string username, string pw, string name, string lastname)
         {
             id = ++ID_COUNTER;
             Username = username;

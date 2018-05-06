@@ -8,23 +8,29 @@
 //------------------------------------------------------------------------------
 
 
-
 namespace MusicBox
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        private global::MusicBox.MusicBox_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::MusicBox.MusicBox_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        {
+            get
+            {
+                if (__appProvider == null)
+                {
+                    __appProvider = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMetaDataProvider();
+                }
+                return __appProvider;
+            }
+        }
 
         /// <summary>
         /// GetXamlType(Type)
         /// </summary>
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
-            if(_provider == null)
-            {
-                _provider = new global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider();
-            }
-            return _provider.GetXamlTypeByType(type);
+            return _AppProvider.GetXamlType(type);
         }
 
         /// <summary>
@@ -32,11 +38,56 @@ namespace MusicBox
         /// </summary>
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
         {
-            if(_provider == null)
+            return _AppProvider.GetXamlType(fullName);
+        }
+
+        /// <summary>
+        /// GetXmlnsDefinitions()
+        /// </summary>
+        public global::Windows.UI.Xaml.Markup.XmlnsDefinition[] GetXmlnsDefinitions()
+        {
+            return _AppProvider.GetXmlnsDefinitions();
+        }
+    }
+}
+
+namespace MusicBox.MusicBox_XamlTypeInfo
+{
+    /// <summary>
+    /// Main class for providing metadata for the app or library
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
+    {
+        private global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+
+        private global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider Provider
+        {
+            get
             {
-                _provider = new global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider();
+                if (_provider == null)
+                {
+                    _provider = new global::MusicBox.MusicBox_XamlTypeInfo.XamlTypeInfoProvider();
+                }
+                return _provider;
             }
-            return _provider.GetXamlTypeByName(fullName);
+        }
+
+        /// <summary>
+        /// GetXamlType(Type)
+        /// </summary>
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
+        {
+            return Provider.GetXamlTypeByType(type);
+        }
+
+        /// <summary>
+        /// GetXamlType(String)
+        /// </summary>
+        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
+        {
+            return Provider.GetXamlTypeByName(fullName);
         }
 
         /// <summary>
@@ -47,11 +98,8 @@ namespace MusicBox
             return new global::Windows.UI.Xaml.Markup.XmlnsDefinition[0];
         }
     }
-}
 
-namespace MusicBox.MusicBox_XamlTypeInfo
-{
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
@@ -132,19 +180,23 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "MusicBox.Administration";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "MusicBox.BlankPage1";
-            _typeNameTable[4] = "MusicBox.MainPage";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "MusicBox.SearchButton";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[2] = "MusicBox.Administration";
+            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[4] = "MusicBox.BlankPage1";
+            _typeNameTable[5] = "MusicBox.MainPage";
+            _typeNameTable[6] = "MusicBox.Views.Administration_v2";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::MusicBox.Administration);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::MusicBox.BlankPage1);
-            _typeTable[4] = typeof(global::MusicBox.MainPage);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::MusicBox.SearchButton);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[2] = typeof(global::MusicBox.Administration);
+            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[4] = typeof(global::MusicBox.BlankPage1);
+            _typeTable[5] = typeof(global::MusicBox.MainPage);
+            _typeTable[6] = typeof(global::MusicBox.Views.Administration_v2);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,9 +231,11 @@ namespace MusicBox.MusicBox_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Administration() { return new global::MusicBox.Administration(); }
-        private object Activate_3_BlankPage1() { return new global::MusicBox.BlankPage1(); }
-        private object Activate_4_MainPage() { return new global::MusicBox.MainPage(); }
+        private object Activate_0_SearchButton() { return new global::MusicBox.SearchButton(); }
+        private object Activate_2_Administration() { return new global::MusicBox.Administration(); }
+        private object Activate_4_BlankPage1() { return new global::MusicBox.BlankPage1(); }
+        private object Activate_5_MainPage() { return new global::MusicBox.MainPage(); }
+        private object Activate_6_Administration_v2() { return new global::MusicBox.Views.Administration_v2(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -193,31 +247,45 @@ namespace MusicBox.MusicBox_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  MusicBox.Administration
-                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_Administration;
+            case 0:   //  MusicBox.SearchButton
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_SearchButton;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  MusicBox.BlankPage1
+            case 2:   //  MusicBox.Administration
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_BlankPage1;
+                userType.Activator = Activate_2_Administration;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  MusicBox.MainPage
+            case 3:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  MusicBox.BlankPage1
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_BlankPage1;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  MusicBox.MainPage
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  MusicBox.Views.Administration_v2
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Administration_v2;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -235,7 +303,7 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlSystemBaseType : global::Windows.UI.Xaml.Markup.IXamlType
     {
@@ -281,8 +349,9 @@ namespace MusicBox.MusicBox_XamlTypeInfo
     internal delegate object Activator();
     internal delegate void AddToCollection(object instance, object item);
     internal delegate void AddToDictionary(object instance, object key, object item);
+    internal delegate object CreateFromStringMethod(string args);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlUserType : global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType
     {
@@ -365,12 +434,16 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         override public void RunInitializer() 
         {
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
+            global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
         }
 
         override public object CreateFromString(string input)
         {
-            if (_enumValues != null)
+            if (CreateFromStringMethod != null)
+            {
+                return this.CreateFromStringMethod(input);
+            }
+            else if (_enumValues != null)
             {
                 int value = 0;
 
@@ -425,6 +498,7 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         public Activator Activator { get; set; }
         public AddToCollection CollectionAdd { get; set; }
         public AddToDictionary DictionaryAdd { get; set; }
+        public CreateFromStringMethod CreateFromStringMethod {get; set; }
 
         public void SetContentPropertyName(string contentPropertyName)
         {
@@ -488,7 +562,7 @@ namespace MusicBox.MusicBox_XamlTypeInfo
     internal delegate object Getter(object instance);
     internal delegate void Setter(object instance, object value);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {

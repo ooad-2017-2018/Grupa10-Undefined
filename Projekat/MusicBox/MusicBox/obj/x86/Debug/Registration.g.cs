@@ -18,53 +18,53 @@ namespace MusicBox
         /// <summary>
         /// Connect()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void Connect(int connectionId, object target)
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // Registration.xaml line 27
                 {
                     this.nazadButton = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 2:
+            case 2: // Registration.xaml line 74
                 {
                     this.registrujSeButton = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
-            case 3:
+            case 3: // Registration.xaml line 67
                 {
                     this.usloviKoristenjaCheckBox = (global::Windows.UI.Xaml.Controls.CheckBox)(target);
                 }
                 break;
-            case 4:
+            case 4: // Registration.xaml line 61
                 {
                     this.usloviKoristenjaRichTextBox = (global::Windows.UI.Xaml.Controls.RichTextBlock)(target);
                 }
                 break;
-            case 5:
+            case 5: // Registration.xaml line 55
                 {
                     this.confirmPasswordTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 6:
+            case 6: // Registration.xaml line 48
                 {
                     this.passwordTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 7:
+            case 7: // Registration.xaml line 40
                 {
                     this.usernameTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 8:
+            case 8: // Registration.xaml line 33
                 {
                     this.prezimeTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
                 break;
-            case 9:
+            case 9: // Registration.xaml line 25
                 {
                     this.imeTextBox = (global::Windows.UI.Xaml.Controls.TextBox)(target);
                 }
@@ -75,7 +75,10 @@ namespace MusicBox
             this._contentLoaded = true;
         }
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
         {
