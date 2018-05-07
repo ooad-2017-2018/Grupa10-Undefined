@@ -48,7 +48,7 @@ namespace MusicBox.ViewModels
         {
             SqlConnection con = new SqlConnection(_connectionString);
             con.Open();
-            SqlCommand cmd = new SqlCommand(@"SELECT u.id   FROM User u
+            SqlCommand cmd = new SqlCommand(@"SELECT u.id FROM USERS u
                                               WHERE u.username = '" + Username + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)

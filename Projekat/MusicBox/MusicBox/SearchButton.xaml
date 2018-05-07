@@ -11,12 +11,13 @@
     Height="auto"
     Width="auto">
     
+    
 
 
 
     <Grid>
-        <TextBox x:Name="tbInput" HorizontalAlignment="Stretch" Height="53" Margin="0,3,0,0" TextWrapping="Wrap" Text="Enter a username..." VerticalAlignment="Top" Width="auto"/>
-        <Button Content="Search" HorizontalAlignment="Stretch" Height="53" Margin="237,3,0,0" VerticalAlignment="Top" Width="auto"/>
+        <TextBox x:Name="tbInput" Text="{Binding SearchText, Mode=TwoWay}" HorizontalAlignment="Stretch" Height="53" Margin="0,3,0,0" TextWrapping="Wrap" PlaceholderText="Enter a username" VerticalAlignment="Top" Width="auto"/>
+        <Button x:Name="Button1" Content="Search" Command="{Binding CommandOne}" HorizontalAlignment="Stretch" Height="53" Margin="237,3,0,0" VerticalAlignment="Top" Width="auto"/>
 
     </Grid>
 </UserControl>

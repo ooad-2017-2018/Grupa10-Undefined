@@ -180,47 +180,49 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[20];
             _typeNameTable[0] = "MusicBox.SearchButton";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "MusicBox.Administration";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "MusicBox.ViewModels.LoginViewModel";
-            _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "MusicBox.ViewModels.LoginCommands.LoginCommand";
-            _typeNameTable[7] = "MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand";
-            _typeNameTable[8] = "MusicBox.ViewModels.LoginCommands.RegisterCommand";
-            _typeNameTable[9] = "MusicBox.Models.User";
-            _typeNameTable[10] = "String";
-            _typeNameTable[11] = "MusicBox.MainPage";
-            _typeNameTable[12] = "MusicBox.Views.Administration_v2";
-            _typeNameTable[13] = "MusicBox.ViewModels.RegistrationViewModel";
-            _typeNameTable[14] = "MusicBox.ViewModels.RegistrationCommands.BackCommand";
-            _typeNameTable[15] = "MusicBox.ViewModels.RegistrationCommands.RegisterCommand";
-            _typeNameTable[16] = "MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand";
-            _typeNameTable[17] = "Boolean";
-            _typeNameTable[18] = "MusicBox.Views.Registration";
+            _typeNameTable[2] = "String";
+            _typeNameTable[3] = "System.Windows.Input.ICommand";
+            _typeNameTable[4] = "MusicBox.Administration";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "MusicBox.ViewModels.LoginViewModel";
+            _typeNameTable[7] = "Object";
+            _typeNameTable[8] = "MusicBox.ViewModels.LoginCommands.LoginCommand";
+            _typeNameTable[9] = "MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand";
+            _typeNameTable[10] = "MusicBox.ViewModels.LoginCommands.RegisterCommand";
+            _typeNameTable[11] = "MusicBox.Models.User";
+            _typeNameTable[12] = "MusicBox.MainPage";
+            _typeNameTable[13] = "MusicBox.Views.Administration_v2";
+            _typeNameTable[14] = "MusicBox.ViewModels.RegistrationViewModel";
+            _typeNameTable[15] = "MusicBox.ViewModels.RegistrationCommands.BackCommand";
+            _typeNameTable[16] = "MusicBox.ViewModels.RegistrationCommands.RegisterCommand";
+            _typeNameTable[17] = "MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand";
+            _typeNameTable[18] = "Boolean";
+            _typeNameTable[19] = "MusicBox.Views.Registration";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[20];
             _typeTable[0] = typeof(global::MusicBox.SearchButton);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::MusicBox.Administration);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::MusicBox.ViewModels.LoginViewModel);
-            _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::MusicBox.ViewModels.LoginCommands.LoginCommand);
-            _typeTable[7] = typeof(global::MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand);
-            _typeTable[8] = typeof(global::MusicBox.ViewModels.LoginCommands.RegisterCommand);
-            _typeTable[9] = typeof(global::MusicBox.Models.User);
-            _typeTable[10] = typeof(global::System.String);
-            _typeTable[11] = typeof(global::MusicBox.MainPage);
-            _typeTable[12] = typeof(global::MusicBox.Views.Administration_v2);
-            _typeTable[13] = typeof(global::MusicBox.ViewModels.RegistrationViewModel);
-            _typeTable[14] = typeof(global::MusicBox.ViewModels.RegistrationCommands.BackCommand);
-            _typeTable[15] = typeof(global::MusicBox.ViewModels.RegistrationCommands.RegisterCommand);
-            _typeTable[16] = typeof(global::MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand);
-            _typeTable[17] = typeof(global::System.Boolean);
-            _typeTable[18] = typeof(global::MusicBox.Views.Registration);
+            _typeTable[2] = typeof(global::System.String);
+            _typeTable[3] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[4] = typeof(global::MusicBox.Administration);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::MusicBox.ViewModels.LoginViewModel);
+            _typeTable[7] = typeof(global::System.Object);
+            _typeTable[8] = typeof(global::MusicBox.ViewModels.LoginCommands.LoginCommand);
+            _typeTable[9] = typeof(global::MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand);
+            _typeTable[10] = typeof(global::MusicBox.ViewModels.LoginCommands.RegisterCommand);
+            _typeTable[11] = typeof(global::MusicBox.Models.User);
+            _typeTable[12] = typeof(global::MusicBox.MainPage);
+            _typeTable[13] = typeof(global::MusicBox.Views.Administration_v2);
+            _typeTable[14] = typeof(global::MusicBox.ViewModels.RegistrationViewModel);
+            _typeTable[15] = typeof(global::MusicBox.ViewModels.RegistrationCommands.BackCommand);
+            _typeTable[16] = typeof(global::MusicBox.ViewModels.RegistrationCommands.RegisterCommand);
+            _typeTable[17] = typeof(global::MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand);
+            _typeTable[18] = typeof(global::System.Boolean);
+            _typeTable[19] = typeof(global::MusicBox.Views.Registration);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -256,12 +258,12 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         }
 
         private object Activate_0_SearchButton() { return new global::MusicBox.SearchButton(); }
-        private object Activate_2_Administration() { return new global::MusicBox.Administration(); }
-        private object Activate_4_LoginViewModel() { return new global::MusicBox.ViewModels.LoginViewModel(); }
-        private object Activate_11_MainPage() { return new global::MusicBox.MainPage(); }
-        private object Activate_12_Administration_v2() { return new global::MusicBox.Views.Administration_v2(); }
-        private object Activate_13_RegistrationViewModel() { return new global::MusicBox.ViewModels.RegistrationViewModel(); }
-        private object Activate_18_Registration() { return new global::MusicBox.Views.Registration(); }
+        private object Activate_4_Administration() { return new global::MusicBox.Administration(); }
+        private object Activate_6_LoginViewModel() { return new global::MusicBox.ViewModels.LoginViewModel(); }
+        private object Activate_12_MainPage() { return new global::MusicBox.MainPage(); }
+        private object Activate_13_Administration_v2() { return new global::MusicBox.Views.Administration_v2(); }
+        private object Activate_14_RegistrationViewModel() { return new global::MusicBox.ViewModels.RegistrationViewModel(); }
+        private object Activate_19_Registration() { return new global::MusicBox.Views.Registration(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -276,6 +278,8 @@ namespace MusicBox.MusicBox_XamlTypeInfo
             case 0:   //  MusicBox.SearchButton
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_SearchButton;
+                userType.AddMemberName("SearchText");
+                userType.AddMemberName("CommandOne");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -284,20 +288,30 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  MusicBox.Administration
+            case 2:   //  String
+                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  System.Windows.Input.ICommand
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  MusicBox.Administration
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_Administration;
+                userType.Activator = Activate_4_Administration;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  MusicBox.ViewModels.LoginViewModel
+            case 6:   //  MusicBox.ViewModels.LoginViewModel
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_LoginViewModel;
+                userType.Activator = Activate_6_LoginViewModel;
                 userType.AddMemberName("LoginCommand");
                 userType.AddMemberName("LoginAsGuestCommand");
                 userType.AddMemberName("RegisterCommand");
@@ -308,59 +322,55 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  Object
+            case 7:   //  Object
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  MusicBox.ViewModels.LoginCommands.LoginCommand
+            case 8:   //  MusicBox.ViewModels.LoginCommands.LoginCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand
+            case 9:   //  MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  MusicBox.ViewModels.LoginCommands.RegisterCommand
+            case 10:   //  MusicBox.ViewModels.LoginCommands.RegisterCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  MusicBox.Models.User
+            case 11:   //  MusicBox.Models.User
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  String
-                xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 11:   //  MusicBox.MainPage
+            case 12:   //  MusicBox.MainPage
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+                userType.Activator = Activate_12_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  MusicBox.Views.Administration_v2
+            case 13:   //  MusicBox.Views.Administration_v2
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_Administration_v2;
+                userType.Activator = Activate_13_Administration_v2;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  MusicBox.ViewModels.RegistrationViewModel
+            case 14:   //  MusicBox.ViewModels.RegistrationViewModel
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_13_RegistrationViewModel;
+                userType.Activator = Activate_14_RegistrationViewModel;
                 userType.AddMemberName("BackCommand");
                 userType.AddMemberName("RegisterCommand");
                 userType.AddMemberName("AgreementCheckCommand");
@@ -374,34 +384,34 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  MusicBox.ViewModels.RegistrationCommands.BackCommand
+            case 15:   //  MusicBox.ViewModels.RegistrationCommands.BackCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  MusicBox.ViewModels.RegistrationCommands.RegisterCommand
+            case 16:   //  MusicBox.ViewModels.RegistrationCommands.RegisterCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand
+            case 17:   //  MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Boolean
+            case 18:   //  Boolean
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  MusicBox.Views.Registration
+            case 19:   //  MusicBox.Views.Registration
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_Registration;
+                userType.Activator = Activate_19_Registration;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -410,152 +420,172 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         }
 
 
-        private object get_0_LoginViewModel_LoginCommand(object instance)
+        private object get_0_SearchButton_SearchText(object instance)
+        {
+            var that = (global::MusicBox.SearchButton)instance;
+            return that.SearchText;
+        }
+        private void set_0_SearchButton_SearchText(object instance, object Value)
+        {
+            var that = (global::MusicBox.SearchButton)instance;
+            that.SearchText = (global::System.String)Value;
+        }
+        private object get_1_SearchButton_CommandOne(object instance)
+        {
+            var that = (global::MusicBox.SearchButton)instance;
+            return that.CommandOne;
+        }
+        private void set_1_SearchButton_CommandOne(object instance, object Value)
+        {
+            var that = (global::MusicBox.SearchButton)instance;
+            that.CommandOne = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_2_LoginViewModel_LoginCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.LoginCommand;
         }
-        private void set_0_LoginViewModel_LoginCommand(object instance, object Value)
+        private void set_2_LoginViewModel_LoginCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.LoginCommand = (global::MusicBox.ViewModels.LoginCommands.LoginCommand)Value;
         }
-        private object get_1_LoginViewModel_LoginAsGuestCommand(object instance)
+        private object get_3_LoginViewModel_LoginAsGuestCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.LoginAsGuestCommand;
         }
-        private void set_1_LoginViewModel_LoginAsGuestCommand(object instance, object Value)
+        private void set_3_LoginViewModel_LoginAsGuestCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.LoginAsGuestCommand = (global::MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand)Value;
         }
-        private object get_2_LoginViewModel_RegisterCommand(object instance)
+        private object get_4_LoginViewModel_RegisterCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.RegisterCommand;
         }
-        private void set_2_LoginViewModel_RegisterCommand(object instance, object Value)
+        private void set_4_LoginViewModel_RegisterCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.RegisterCommand = (global::MusicBox.ViewModels.LoginCommands.RegisterCommand)Value;
         }
-        private object get_3_LoginViewModel_LoggedUser(object instance)
+        private object get_5_LoginViewModel_LoggedUser(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.LoggedUser;
         }
-        private void set_3_LoginViewModel_LoggedUser(object instance, object Value)
+        private void set_5_LoginViewModel_LoggedUser(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.LoggedUser = (global::MusicBox.Models.User)Value;
         }
-        private object get_4_LoginViewModel_Username(object instance)
+        private object get_6_LoginViewModel_Username(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.Username;
         }
-        private void set_4_LoginViewModel_Username(object instance, object Value)
+        private void set_6_LoginViewModel_Username(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.Username = (global::System.String)Value;
         }
-        private object get_5_LoginViewModel_Password(object instance)
+        private object get_7_LoginViewModel_Password(object instance)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             return that.Password;
         }
-        private void set_5_LoginViewModel_Password(object instance, object Value)
+        private void set_7_LoginViewModel_Password(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.LoginViewModel)instance;
             that.Password = (global::System.String)Value;
         }
-        private object get_6_RegistrationViewModel_BackCommand(object instance)
+        private object get_8_RegistrationViewModel_BackCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.BackCommand;
         }
-        private void set_6_RegistrationViewModel_BackCommand(object instance, object Value)
+        private void set_8_RegistrationViewModel_BackCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.BackCommand = (global::MusicBox.ViewModels.RegistrationCommands.BackCommand)Value;
         }
-        private object get_7_RegistrationViewModel_RegisterCommand(object instance)
+        private object get_9_RegistrationViewModel_RegisterCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.RegisterCommand;
         }
-        private void set_7_RegistrationViewModel_RegisterCommand(object instance, object Value)
+        private void set_9_RegistrationViewModel_RegisterCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.RegisterCommand = (global::MusicBox.ViewModels.RegistrationCommands.RegisterCommand)Value;
         }
-        private object get_8_RegistrationViewModel_AgreementCheckCommand(object instance)
+        private object get_10_RegistrationViewModel_AgreementCheckCommand(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.AgreementCheckCommand;
         }
-        private void set_8_RegistrationViewModel_AgreementCheckCommand(object instance, object Value)
+        private void set_10_RegistrationViewModel_AgreementCheckCommand(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.AgreementCheckCommand = (global::MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand)Value;
         }
-        private object get_9_RegistrationViewModel_FirstName(object instance)
+        private object get_11_RegistrationViewModel_FirstName(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.FirstName;
         }
-        private void set_9_RegistrationViewModel_FirstName(object instance, object Value)
+        private void set_11_RegistrationViewModel_FirstName(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.FirstName = (global::System.String)Value;
         }
-        private object get_10_RegistrationViewModel_LastName(object instance)
+        private object get_12_RegistrationViewModel_LastName(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.LastName;
         }
-        private void set_10_RegistrationViewModel_LastName(object instance, object Value)
+        private void set_12_RegistrationViewModel_LastName(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.LastName = (global::System.String)Value;
         }
-        private object get_11_RegistrationViewModel_Username(object instance)
+        private object get_13_RegistrationViewModel_Username(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.Username;
         }
-        private void set_11_RegistrationViewModel_Username(object instance, object Value)
+        private void set_13_RegistrationViewModel_Username(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.Username = (global::System.String)Value;
         }
-        private object get_12_RegistrationViewModel_Password(object instance)
+        private object get_14_RegistrationViewModel_Password(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.Password;
         }
-        private void set_12_RegistrationViewModel_Password(object instance, object Value)
+        private void set_14_RegistrationViewModel_Password(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.Password = (global::System.String)Value;
         }
-        private object get_13_RegistrationViewModel_TermsOfLicence(object instance)
+        private object get_15_RegistrationViewModel_TermsOfLicence(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.TermsOfLicence;
         }
-        private void set_13_RegistrationViewModel_TermsOfLicence(object instance, object Value)
+        private void set_15_RegistrationViewModel_TermsOfLicence(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.TermsOfLicence = (global::System.Boolean)Value;
         }
-        private object get_14_RegistrationViewModel_ConfirmPassowrd(object instance)
+        private object get_16_RegistrationViewModel_ConfirmPassowrd(object instance)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             return that.ConfirmPassowrd;
         }
-        private void set_14_RegistrationViewModel_ConfirmPassowrd(object instance, object Value)
+        private void set_16_RegistrationViewModel_ConfirmPassowrd(object instance, object Value)
         {
             var that = (global::MusicBox.ViewModels.RegistrationViewModel)instance;
             that.ConfirmPassowrd = (global::System.String)Value;
@@ -568,95 +598,109 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "MusicBox.SearchButton.SearchText":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.SearchButton");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "SearchText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_SearchButton_SearchText;
+                xamlMember.Setter = set_0_SearchButton_SearchText;
+                break;
+            case "MusicBox.SearchButton.CommandOne":
+                userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.SearchButton");
+                xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "CommandOne", "System.Windows.Input.ICommand");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_SearchButton_CommandOne;
+                xamlMember.Setter = set_1_SearchButton_CommandOne;
+                break;
             case "MusicBox.ViewModels.LoginViewModel.LoginCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LoginCommand", "MusicBox.ViewModels.LoginCommands.LoginCommand");
-                xamlMember.Getter = get_0_LoginViewModel_LoginCommand;
-                xamlMember.Setter = set_0_LoginViewModel_LoginCommand;
+                xamlMember.Getter = get_2_LoginViewModel_LoginCommand;
+                xamlMember.Setter = set_2_LoginViewModel_LoginCommand;
                 break;
             case "MusicBox.ViewModels.LoginViewModel.LoginAsGuestCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LoginAsGuestCommand", "MusicBox.ViewModels.LoginCommands.LoginAsGuestCommand");
-                xamlMember.Getter = get_1_LoginViewModel_LoginAsGuestCommand;
-                xamlMember.Setter = set_1_LoginViewModel_LoginAsGuestCommand;
+                xamlMember.Getter = get_3_LoginViewModel_LoginAsGuestCommand;
+                xamlMember.Setter = set_3_LoginViewModel_LoginAsGuestCommand;
                 break;
             case "MusicBox.ViewModels.LoginViewModel.RegisterCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "RegisterCommand", "MusicBox.ViewModels.LoginCommands.RegisterCommand");
-                xamlMember.Getter = get_2_LoginViewModel_RegisterCommand;
-                xamlMember.Setter = set_2_LoginViewModel_RegisterCommand;
+                xamlMember.Getter = get_4_LoginViewModel_RegisterCommand;
+                xamlMember.Setter = set_4_LoginViewModel_RegisterCommand;
                 break;
             case "MusicBox.ViewModels.LoginViewModel.LoggedUser":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LoggedUser", "MusicBox.Models.User");
-                xamlMember.Getter = get_3_LoginViewModel_LoggedUser;
-                xamlMember.Setter = set_3_LoginViewModel_LoggedUser;
+                xamlMember.Getter = get_5_LoginViewModel_LoggedUser;
+                xamlMember.Setter = set_5_LoginViewModel_LoggedUser;
                 break;
             case "MusicBox.ViewModels.LoginViewModel.Username":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Username", "String");
-                xamlMember.Getter = get_4_LoginViewModel_Username;
-                xamlMember.Setter = set_4_LoginViewModel_Username;
+                xamlMember.Getter = get_6_LoginViewModel_Username;
+                xamlMember.Setter = set_6_LoginViewModel_Username;
                 break;
             case "MusicBox.ViewModels.LoginViewModel.Password":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.LoginViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Password", "String");
-                xamlMember.Getter = get_5_LoginViewModel_Password;
-                xamlMember.Setter = set_5_LoginViewModel_Password;
+                xamlMember.Getter = get_7_LoginViewModel_Password;
+                xamlMember.Setter = set_7_LoginViewModel_Password;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.BackCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "BackCommand", "MusicBox.ViewModels.RegistrationCommands.BackCommand");
-                xamlMember.Getter = get_6_RegistrationViewModel_BackCommand;
-                xamlMember.Setter = set_6_RegistrationViewModel_BackCommand;
+                xamlMember.Getter = get_8_RegistrationViewModel_BackCommand;
+                xamlMember.Setter = set_8_RegistrationViewModel_BackCommand;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.RegisterCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "RegisterCommand", "MusicBox.ViewModels.RegistrationCommands.RegisterCommand");
-                xamlMember.Getter = get_7_RegistrationViewModel_RegisterCommand;
-                xamlMember.Setter = set_7_RegistrationViewModel_RegisterCommand;
+                xamlMember.Getter = get_9_RegistrationViewModel_RegisterCommand;
+                xamlMember.Setter = set_9_RegistrationViewModel_RegisterCommand;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.AgreementCheckCommand":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "AgreementCheckCommand", "MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand");
-                xamlMember.Getter = get_8_RegistrationViewModel_AgreementCheckCommand;
-                xamlMember.Setter = set_8_RegistrationViewModel_AgreementCheckCommand;
+                xamlMember.Getter = get_10_RegistrationViewModel_AgreementCheckCommand;
+                xamlMember.Setter = set_10_RegistrationViewModel_AgreementCheckCommand;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.FirstName":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "FirstName", "String");
-                xamlMember.Getter = get_9_RegistrationViewModel_FirstName;
-                xamlMember.Setter = set_9_RegistrationViewModel_FirstName;
+                xamlMember.Getter = get_11_RegistrationViewModel_FirstName;
+                xamlMember.Setter = set_11_RegistrationViewModel_FirstName;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.LastName":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "LastName", "String");
-                xamlMember.Getter = get_10_RegistrationViewModel_LastName;
-                xamlMember.Setter = set_10_RegistrationViewModel_LastName;
+                xamlMember.Getter = get_12_RegistrationViewModel_LastName;
+                xamlMember.Setter = set_12_RegistrationViewModel_LastName;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.Username":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Username", "String");
-                xamlMember.Getter = get_11_RegistrationViewModel_Username;
-                xamlMember.Setter = set_11_RegistrationViewModel_Username;
+                xamlMember.Getter = get_13_RegistrationViewModel_Username;
+                xamlMember.Setter = set_13_RegistrationViewModel_Username;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.Password":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "Password", "String");
-                xamlMember.Getter = get_12_RegistrationViewModel_Password;
-                xamlMember.Setter = set_12_RegistrationViewModel_Password;
+                xamlMember.Getter = get_14_RegistrationViewModel_Password;
+                xamlMember.Setter = set_14_RegistrationViewModel_Password;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.TermsOfLicence":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "TermsOfLicence", "Boolean");
-                xamlMember.Getter = get_13_RegistrationViewModel_TermsOfLicence;
-                xamlMember.Setter = set_13_RegistrationViewModel_TermsOfLicence;
+                xamlMember.Getter = get_15_RegistrationViewModel_TermsOfLicence;
+                xamlMember.Setter = set_15_RegistrationViewModel_TermsOfLicence;
                 break;
             case "MusicBox.ViewModels.RegistrationViewModel.ConfirmPassowrd":
                 userType = (global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MusicBox.ViewModels.RegistrationViewModel");
                 xamlMember = new global::MusicBox.MusicBox_XamlTypeInfo.XamlMember(this, "ConfirmPassowrd", "String");
-                xamlMember.Getter = get_14_RegistrationViewModel_ConfirmPassowrd;
-                xamlMember.Setter = set_14_RegistrationViewModel_ConfirmPassowrd;
+                xamlMember.Getter = get_16_RegistrationViewModel_ConfirmPassowrd;
+                xamlMember.Setter = set_16_RegistrationViewModel_ConfirmPassowrd;
                 break;
             }
             return xamlMember;

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CommandOne" />
+    <RootPropertyPathName Name="SearchText" />
     <RootPropertyPathName Name="SearchResults" />
     <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="SearchButtonClick" />
@@ -8,6 +10,8 @@
     <RootPropertyPathName Name="LoginAsGuestCommand" />
     <RootPropertyPathName Name="LoginClicked" />
     <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="SearchSubstring" />
+    <RootPropertyPathName Name="SearchClick" />
     <RootPropertyPathName Name="SongReportsRefreshClick" />
     <RootPropertyPathName Name="SongReportsList" />
     <RootPropertyPathName Name="UserReportsRefreshClick" />
@@ -45,11 +49,12 @@
       <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
+      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
@@ -58,6 +63,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
@@ -65,10 +71,16 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Command" />
       <RootProperty Name="Opacity" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+    </RootType>
     <RootType FullName="MusicBox.SearchButton">
+      <RootProperty Name="SearchText" />
+      <RootProperty Name="CommandOne" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Opacity" />
@@ -113,11 +125,6 @@
       <RootProperty Name="Opacity" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />

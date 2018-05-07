@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MusicBox.ViewModels;
 
+//!!! IZBACITI
+using Windows.UI.Popups;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MusicBox.Views
@@ -27,6 +30,8 @@ namespace MusicBox.Views
         {
             this.InitializeComponent();
             this.DataContext = new AdministrationViewModel();
+            
         }
+       
     }
 }

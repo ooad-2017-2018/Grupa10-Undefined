@@ -21,12 +21,14 @@ namespace MusicBox.ViewModels
     {
         string _connectionString;
         string _username;
+        string _searchSubstring;
         public ObservableCollection<String> UserReportsList { get; set; }
         public ObservableCollection<String> SongReportsList { get; set; }
         public ObservableCollection<User> SearchResults { get; set; }
         ICommand searchButtonClick;
         ICommand userReportsRefreshClick;
         ICommand songReportsRefreshClick;
+        ICommand searchClick;
 
         public AdministrationViewModel()
         {
@@ -52,6 +54,7 @@ namespace MusicBox.ViewModels
         }
 
         public string Username { get => _username; set => _username = value; }
+        public string SearchSubstring { get => _searchSubstring; set => _searchSubstring = value; }
 
 
         public ICommand UserReportsRefreshClick
@@ -70,6 +73,21 @@ namespace MusicBox.ViewModels
                 return songReportsRefreshClick ??
                     (songReportsRefreshClick = new RelayCommand(songRefresh));
             }
+        }
+
+        public ICommand SearchClick
+        {
+            get
+            {
+                return searchClick ??
+                    (searchClick = new RelayCommand(executeSearch));
+            }
+        }        
+
+        async void executeSearch()
+        {
+            var dialog = new MessageDialog(SearchSubstring);
+            await dialog.ShowAsync();
         }
 
         void userRefresh()

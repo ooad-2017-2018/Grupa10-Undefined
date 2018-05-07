@@ -1,4 +1,4 @@
-﻿<Page
+﻿    <Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MusicBox.Views"
@@ -327,7 +327,7 @@
             <Button x:Name="bSongReportsRefresh" Content="button" Command ="{Binding SongReportsRefreshClick}" HorizontalAlignment="Stretch" Height="66" Margin="66,0,94,0" Opacity="0" VerticalAlignment="Stretch"/>
         </StackPanel>
         <StackPanel x:Name="stackPanel2" HorizontalAlignment="Left" Height="720" Margin="847,0,0,0" Opacity="0" VerticalAlignment="Top" Width="403" BorderThickness="1" BorderBrush="Black">
-            <MusicBox:SearchButton x:Name="searchButton" Height="70" Margin="33,0,10,0" Opacity="0"/>
+            <MusicBox:SearchButton x:Name="searchButton" SearchText="{Binding SearchSubstring, Mode=TwoWay}" CommandOne="{Binding SearchClick}" Height="70" Margin="33,0,10,0" Opacity="0"/>
             <ListView x:Name="lvUsers" Height="467" Margin="32,0,36,0" Opacity="0" BorderThickness="1" BorderBrush="Blue" Background="LightGray"/>
             <TextBox x:Name="tbDuration" Height="76" Margin="8,0,0,0" Opacity="0" TextWrapping="Wrap" Text="textBox"/>
             <Button x:Name="bBan" Content="button" HorizontalAlignment="Stretch" Height="45" Margin="0,0,218,0" Opacity="0" VerticalAlignment="Stretch"/>
