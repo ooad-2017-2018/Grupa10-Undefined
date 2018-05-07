@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page 
     x:Class="MusicBox.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,9 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local1="using:MusicBox.ViewModels"
-    mc:Ignorable="d">    
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local1:LoginViewModel x:Key="loginModel"/>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinHeight="500" MinWidth="500">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
@@ -23,29 +25,39 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
             <TextBlock  Text="Username: " FontSize="25" Margin="0,0,20,0"/>
-            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="usernameTextBox" Text="{Binding Username}"/>
+            <TextBox Text="{Binding Path=Username, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
+                     HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+                     x:Name="usernameTextBox"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="1"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>           
-            <PasswordBox  FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" x:Name="passwordBox"/>
+            <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>
+            <TextBox  Text="{Binding Path=Password, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
+                      HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+                      x:Name="passwordTextBox"/>
         </StackPanel>
         <StackPanel
                 Grid.Row="2"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="loginButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding LoginButtonClicked}" CommandParameter="{Binding ElementName=passwordBox}"/>
+            <Button  x:Name="loginButton" 
+                     Content="Log in" HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" Height="50" Width="440" 
+                     Command="{Binding LoginClicked, Source={StaticResource loginModel}}" />
         </StackPanel>
         <StackPanel
                 Grid.Row="3"  
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="loginAsGuestButton" Content="Log in as guest" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding LoginGuestButtonClicked}"/>
+            <Button x:Name="loginAsGuestButton" Content="Log in as guest" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Height="50" Width="440" 
+                    Command="{Binding LoginAsGuestCommand, Source={StaticResource loginModel}}"/>
         </StackPanel>
 
         <StackPanel
@@ -53,7 +65,9 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="440" Command="{Binding RegistrationButtonClicked}"/>
+            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Height="50" Width="440" 
+                    Command="{Binding RegisterCommand, Source={StaticResource loginModel}}"/>
         </StackPanel>
         <StackPanel Grid.Row="4"
                     Orientation="Horizontal"
@@ -62,7 +76,5 @@
                     Background="{ThemeResource AppBarBackgroundThemeBrush}">
             <Image Source="Assets/slika.png"/>
         </StackPanel>
-
-
     </Grid>
 </Page>

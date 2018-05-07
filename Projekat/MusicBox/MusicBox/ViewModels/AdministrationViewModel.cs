@@ -121,7 +121,7 @@ namespace MusicBox.ViewModels
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conSession;
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "INSERT INTO USERS(ID, username, password, name, lastname, banned) " +
+            cmd.CommandText = @"INSERT INTO USERS(ID, username, password, name, lastname, banned) " +
                  "               VALUES (1, 'abc', 'abcd', 'aaa', 'bbb', 'FALSE')";
               
             

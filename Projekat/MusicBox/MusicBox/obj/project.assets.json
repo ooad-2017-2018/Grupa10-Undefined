@@ -256,6 +256,12 @@
           }
         }
       },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
+        }
+      },
       "MvvmLightLibs/5.4.1": {
         "type": "package",
         "dependencies": {
@@ -846,6 +852,12 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
         }
       },
       "MvvmLightLibs/5.4.1": {
@@ -1689,6 +1701,12 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
         }
       },
       "MvvmLightLibs/5.4.1": {
@@ -2772,6 +2790,12 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
+        }
+      },
       "MvvmLightLibs/5.4.1": {
         "type": "package",
         "dependencies": {
@@ -3616,6 +3640,12 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
         }
       },
       "MvvmLightLibs/5.4.1": {
@@ -4702,6 +4732,12 @@
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
+        }
+      },
       "MvvmLightLibs/5.4.1": {
         "type": "package",
         "dependencies": {
@@ -5546,6 +5582,12 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MvvmLight/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1"
         }
       },
       "MvvmLightLibs/5.4.1": {
@@ -8709,6 +8751,18 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MvvmLight/5.4.1": {
+      "sha512": "b5MlUz3DzEa8rIdx9DBizriYizNRIGF9prT8r7gTKhSIsQuxwABDo+6L4tpKlYJjIBANCP94fPsAMddcAZyGuA==",
+      "type": "package",
+      "path": "mvvmlight/5.4.1",
+      "files": [
+        "Content/ViewModel/MainViewModel.cs.pp",
+        "Content/ViewModel/ViewModelLocator.cs.pp",
+        "mvvmlight.5.4.1.nupkg.sha512",
+        "mvvmlight.nuspec",
+        "tools/install.ps1"
       ]
     },
     "MvvmLightLibs/5.4.1": {
@@ -12142,37 +12196,40 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.8",
+      "MvvmLight >= 5.4.1",
       "MvvmLightLibs >= 5.4.1",
       "System.Data.SqlClient >= 4.4.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emir\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+    "C:\\Users\\molte\\.nuget\\packages\\": {},
+    "C:\\Program Files\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fakultet\\OOAD\\Workspace\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "projectUniqueName": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
       "projectName": "MusicBox",
-      "projectPath": "D:\\Fakultet\\OOAD\\Workspace\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
-      "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
-      "outputPath": "D:\\Fakultet\\OOAD\\Workspace\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\obj\\",
+      "projectPath": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "packagesPath": "C:\\Users\\molte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\molte\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\molte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.16299"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12187,6 +12244,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.8, )"
+          },
+          "MvvmLight": {
+            "target": "Package",
+            "version": "[5.4.1, )"
           },
           "MvvmLightLibs": {
             "target": "Package",

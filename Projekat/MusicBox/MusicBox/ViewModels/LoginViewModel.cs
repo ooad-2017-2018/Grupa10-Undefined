@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using MusicBox.Models;
+using MusicBox;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,9 @@ using System.Windows.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using MusicBox.ViewModels.LoginCommands;
+using System.Reflection.Metadata;
+using System.Data.SqlClient;
 
 namespace MusicBox.ViewModels
 {
@@ -45,77 +49,75 @@ namespace MusicBox.ViewModels
     public class LoginViewModel
     {
         User loggedUser;
+        int id = -1;
+        string _connectionString;
         string _username = "";
         string _password = "";
-        ICommand loginButtonClicked;
-        ICommand loginGuestButtonClicked;
-        ICommand registrationButtonClicked;
+        public LoginCommand LoginCommand { get; set; }
+        public LoginAsGuestCommand LoginAsGuestCommand { get; set; }
+        public RegisterCommand RegisterCommand { get; set; }
+        NavigationService NavigationService { get; set; }
+
         INavigationService _navigationService;
 
-        public ICommand LoginButtonClicked {
-            get
-            {
-                return loginButtonClicked ??
-                    (loginButtonClicked = new RelayCommand<PasswordBox>(param => this.login(param)));
-            }
-        }
-
-        public ICommand LoginGuestButtonClicked
+        public LoginViewModel()
         {
-            get
-            {
-                return loginGuestButtonClicked ??
-                    (loginGuestButtonClicked = new RelayCommand(loginGuest));
-            }
-        }
+            _navigationService = new NavigationService();
+            this.LoginCommand = new LoginCommand(this);
+            this.LoginAsGuestCommand = new LoginAsGuestCommand(this);
+            this.RegisterCommand = new RegisterCommand(this);
 
-        public ICommand RegistrationButtonClicked
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "ooad-g10-undefined.database.windows.net";
+            builder.UserID = "esehovic2";
+            builder.Password = "esehovic#2";
+            builder.InitialCatalog = "MusicBoxDB";
+            _connectionString = builder.ConnectionString;
+        }
+        async public void Login()
         {
-            get
+            if(Username == "Admin" && Password == "TheBoss")
             {
-                return registrationButtonClicked ??
-                    (registrationButtonClicked = new RelayCommand(registration));
+                _navigationService.Navigate(typeof(MusicBox.Views.Administration_v2));
             }
+            SqlConnection con = new SqlConnection(_connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"SELECT u.id
+                                              FROM User u
+                                              WHERE u.username = '" + Username + "' AND u.password = '" + Password + "'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    id = int.Parse(dr.GetString(0));
+                    var dialog = new MessageDialog("Obisni Login!");
+                    await dialog.ShowAsync();
+                }
+            }
+            if(id == -1)
+            {
+                var dialog = new MessageDialog("Nema jos Registrovanih!");
+                await dialog.ShowAsync();
+            }
+            con.Close();
+        }
+        public void Register()
+        {
+            _navigationService.Navigate(typeof(MusicBox.Views.Registration));
+        }
+        async public void LoginAsGuest()
+        {
+            var dialog = new MessageDialog("Guest Login!");
+            await dialog.ShowAsync();
         }
         public User LoggedUser { get => loggedUser; set => loggedUser = value; }
         public string Username { get => _username; set => _username = value; }
         public string Password { get => _password; set => _password = value; }
-        
+
         public LoginViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-        }
-
-        async public void login(object param)
-        {
-
-            _navigationService.Navigate(typeof(Administration));
-            _password = (param as PasswordBox).Password;
-            bool success = validateLoginData();
-            //TODO izvrsi prijavu
-            var dialog = new MessageDialog("OBICNI LOGIN");
-            await dialog.ShowAsync();
-        }
-
-        async public void loginGuest()
-        {
-            var dialog = new MessageDialog("GUEST LOGIN");
-            await dialog.ShowAsync();
-        }
-        
-        async public void registration()
-        {
-            var dialog = new MessageDialog("REGISTRATION");
-            await dialog.ShowAsync();
-        }
-
-        bool validateLoginData()
-        {
-            return true;
-            //TODO izracunati hash passworda prije poredjenja i provjeriti kako cuvati data u user i registeredUser klasama
-            //TODO dodati praznu listu za pocetak u MusicBox.Users
-            Password = RegisteredUser.calculateHash(Password);
-            return MusicBoxClass.Users.Find(x => x.Username == Username && x.Password == Password) != null;            
         }
     }
 }

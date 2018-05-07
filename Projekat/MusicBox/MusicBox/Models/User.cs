@@ -11,7 +11,6 @@ namespace MusicBox.Models
         Song currSong;
         string username;
         string password;
-
         public Song CurrSong { get => currSong; set => currSong = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
