@@ -38,6 +38,7 @@ namespace MusicBox.ViewModels
         public AdministrationViewModel()
         {
             UserReportsList = new ObservableCollection<string>();
+            SongReportsList = new ObservableCollection<string>();
             SearchResults = new ObservableCollection<string>();
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -111,7 +112,7 @@ namespace MusicBox.ViewModels
         }
 
 
-        async void executeSearch()
+        void executeSearch()
         {
             SearchResults.Clear();
             if (SearchSubstring.Length != 0)
@@ -234,10 +235,24 @@ namespace MusicBox.ViewModels
             con.Close();
         }
 
-        async void songRefresh()
+        void songRefresh()
         {
-            var dialog = new MessageDialog("Binding successful");
-            await dialog.ShowAsync();
+            SqlConnection con = new SqlConnection(_connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"SELECT s.name
+                                                FROM SONGS s, SONG_REPORTS r
+                                                WHERE s.ID = r.SONG_ID", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            SongReportsList.Clear();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    string retVal = dr.GetString(0);
+                    SongReportsList.Add(retVal);
+                }
+            }
+            con.Close();            
         }
 
         //DODAVANJE NOVIH USERA
