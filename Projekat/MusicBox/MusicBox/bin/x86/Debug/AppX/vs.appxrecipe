@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-07T21:54:53.882</Modified>
+      <Modified>2018-05-08T00:29:03.447</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.exe">
       <PackagePath>entrypoint\MusicBox.exe</PackagePath>
-      <Modified>2018-05-07T21:54:53.158</Modified>
+      <Modified>2018-05-08T00:29:02.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Emir\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -763,7 +763,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.xr.xml">
       <PackagePath>MusicBox.xr.xml</PackagePath>
-      <Modified>2018-05-07T21:48:16.679</Modified>
+      <Modified>2018-05-07T23:35:16.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -772,11 +772,11 @@
     <AppxPackagedFile Include="D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-07T21:54:53.569</Modified>
+      <Modified>2018-05-08T00:29:03.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\MusicBox.exe">
       <PackagePath>MusicBox.exe</PackagePath>
-      <Modified>2018-05-07T21:54:53.877</Modified>
+      <Modified>2018-05-08T00:29:03.431</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

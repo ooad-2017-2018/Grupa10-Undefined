@@ -21,19 +21,24 @@ namespace MusicBox.ViewModels
     {
         string _connectionString;
         string _username;
-        string _searchSubstring;
+        string _searchSubstring = "";
+        string _strBanDuration = "";
+        int _selectedIndexVar = -3;
+        string _selectedUsername = "";
         public ObservableCollection<String> UserReportsList { get; set; }
         public ObservableCollection<String> SongReportsList { get; set; }
-        public ObservableCollection<User> SearchResults { get; set; }
+        public ObservableCollection<String> SearchResults { get; set; }
         ICommand searchButtonClick;
         ICommand userReportsRefreshClick;
         ICommand songReportsRefreshClick;
         ICommand searchClick;
+        ICommand banClick;
+        ICommand removeClick;
 
         public AdministrationViewModel()
         {
             UserReportsList = new ObservableCollection<string>();
-            SearchResults = new ObservableCollection<User>();
+            SearchResults = new ObservableCollection<string>();
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "ooad-g10-undefined.database.windows.net";
@@ -43,6 +48,7 @@ namespace MusicBox.ViewModels
             _connectionString = builder.ConnectionString;
         }
         
+        //OVO JE ZAPRAVO DODAVANJE NOVIH USERA
         public ICommand SearchButtonClick
         {
             get
@@ -55,7 +61,9 @@ namespace MusicBox.ViewModels
 
         public string Username { get => _username; set => _username = value; }
         public string SearchSubstring { get => _searchSubstring; set => _searchSubstring = value; }
-
+        public string StrBanDuration { get => _strBanDuration; set => _strBanDuration = value; }
+        public int SelectedIndexVar { get => _selectedIndexVar; set => _selectedIndexVar = value; }
+        public string SelectedUsername { get => _selectedUsername; set => _selectedUsername = value; }
 
         public ICommand UserReportsRefreshClick
         {
@@ -82,12 +90,128 @@ namespace MusicBox.ViewModels
                 return searchClick ??
                     (searchClick = new RelayCommand(executeSearch));
             }
-        }        
+        }
+        
+        public ICommand BanClick
+        {
+            get
+            {
+                return banClick ??
+                    (banClick = new RelayCommand(executeBan));
+            }
+        }
+
+        public ICommand RemoveClick
+        {
+            get
+            {
+                return removeClick??
+                    (removeClick = new RelayCommand(executeRemove));
+            }
+        }
+
 
         async void executeSearch()
         {
-            var dialog = new MessageDialog(SearchSubstring);
-            await dialog.ShowAsync();
+            SearchResults.Clear();
+            if (SearchSubstring.Length != 0)
+            {
+                SearchSubstring = SearchSubstring.ToUpper();
+                SqlConnection con = new SqlConnection(_connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"SELECT u.username
+                                                FROM USERS u
+                                                WHERE UPPER(u.username) LIKE '%" + SearchSubstring + "%'", con);
+                SqlDataReader dr = cmd.ExecuteReader();             
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        string retVal = dr.GetString(0);
+                        SearchResults.Add(retVal);                   
+                    }
+                }
+                con.Close();                
+            }           
+        }
+
+        async void executeBan()
+        {
+            int retVal = 0;
+            Int32.TryParse(StrBanDuration, out int banDuration);
+            if(SelectedIndexVar != -1 && banDuration != 0)
+            {
+                SqlConnection con = new SqlConnection(_connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"SELECT u.ID
+                                     FROM USERS u
+                                     WHERE u.username = '" + SelectedUsername + "'", con);
+               
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        retVal = dr.GetInt32(0);
+                    }
+                }
+                dr.Close();
+
+                cmd = new SqlCommand(@"UPDATE USERS
+                                     SET banned = 'TRUE'
+                                     WHERE ID = " + retVal, con);
+
+                cmd.ExecuteNonQuery();
+                
+                cmd = new SqlCommand(@"DELETE
+                                     FROM BANNED_USERS
+                                     WHERE ID = " + retVal, con);
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand(@"INSERT INTO BANNED_USERS(ID, unbanDate) VALUES (" + retVal + ", '" + DateTime.Now.AddDays(banDuration).ToString("yyyy-MM-dd HH:mm:ss")  + "')", con);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+                var dialog2 = new MessageDialog("Korisnik je uspjesno banovan!");
+                await dialog2.ShowAsync();
+            }            
+        }
+
+        async void executeRemove()
+        {
+            if(SelectedIndexVar != -1)
+            {
+                int retVal = 0;
+                SqlConnection con = new SqlConnection(_connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"SELECT u.ID
+                                     FROM USERS u
+                                     WHERE u.username = '" + SelectedUsername + "'", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        retVal = dr.GetInt32(0);
+                    }
+                }
+                dr.Close();
+
+                cmd = new SqlCommand(@"DELETE
+                                     FROM USERS 
+                                     WHERE ID = " + retVal, con);
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand(@"DELETE
+                                     FROM BANNED_USERS 
+                                     WHERE ID = " + retVal, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                SearchResults.RemoveAt(SelectedIndexVar);
+                var dialog = new MessageDialog("Korisnik je uspjesno izbrisan!");
+                await dialog.ShowAsync();
+            }            
         }
 
         void userRefresh()
@@ -104,12 +228,10 @@ namespace MusicBox.ViewModels
                 while(dr.Read())
                 {
                     string retVal = dr.GetString(0);
-                    UserReportsList.Add(retVal);
-                    //var dialog = new MessageDialog(retVal);
-                    //await dialog.ShowAsync();
+                    UserReportsList.Add(retVal);                    
                 }
             }
-            con.Close();            
+            con.Close();
         }
 
         async void songRefresh()
@@ -118,6 +240,7 @@ namespace MusicBox.ViewModels
             await dialog.ShowAsync();
         }
 
+        //DODAVANJE NOVIH USERA
         async void fillListView()
         {
             //  SearchResults = new ObservableCollection<string>();

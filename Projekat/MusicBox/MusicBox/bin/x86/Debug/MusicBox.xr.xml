@@ -10,6 +10,11 @@
     <RootPropertyPathName Name="LoginAsGuestCommand" />
     <RootPropertyPathName Name="LoginClicked" />
     <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="RemoveClick" />
+    <RootPropertyPathName Name="BanClick" />
+    <RootPropertyPathName Name="StrBanDuration" />
+    <RootPropertyPathName Name="SelectedIndexVar" />
+    <RootPropertyPathName Name="SelectedUsername" />
     <RootPropertyPathName Name="SearchSubstring" />
     <RootPropertyPathName Name="SearchClick" />
     <RootPropertyPathName Name="SongReportsRefreshClick" />
@@ -121,6 +126,8 @@
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedIndex" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="BorderThickness" />

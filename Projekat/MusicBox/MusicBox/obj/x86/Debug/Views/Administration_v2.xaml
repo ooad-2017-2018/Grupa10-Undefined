@@ -328,10 +328,10 @@
         </StackPanel>
         <StackPanel x:ConnectionId='7' x:Name="stackPanel2" HorizontalAlignment="Left" Height="720" Margin="847,0,0,0" Opacity="0" VerticalAlignment="Top" Width="403" BorderThickness="1" BorderBrush="Black">
             <MusicBox:SearchButton x:ConnectionId='8' x:Name="searchButton" SearchText="{Binding SearchSubstring, Mode=TwoWay}" CommandOne="{Binding SearchClick}" Height="70" Margin="33,0,10,0" Opacity="0"/>
-            <ListView x:ConnectionId='9' x:Name="lvUsers" Height="467" Margin="32,0,36,0" Opacity="0" BorderThickness="1" BorderBrush="Blue" Background="LightGray"/>
-            <TextBox x:ConnectionId='10' x:Name="tbDuration" Height="76" Margin="8,0,0,0" Opacity="0" TextWrapping="Wrap" Text="textBox"/>
-            <Button x:ConnectionId='11' x:Name="bBan" Content="button" HorizontalAlignment="Stretch" Height="45" Margin="0,0,218,0" Opacity="0" VerticalAlignment="Stretch"/>
-            <Button x:ConnectionId='12' x:Name="bRemove" Content="button" Command="{Binding SearchButtonClick, Mode=TwoWay}" HorizontalAlignment="Stretch" Height="45" Margin="0,0,217,0" Opacity="0" VerticalAlignment="Stretch"/>
+            <ListView x:ConnectionId='9' x:Name="lvUsers" ItemsSource="{Binding SearchResults}" SelectedIndex="{Binding SelectedIndexVar,Mode=TwoWay}" SelectedItem="{Binding SelectedUsername, Mode=TwoWay}" Height="467" Margin="32,0,36,0" Opacity="0" BorderThickness="1" BorderBrush="Blue" Background="LightGray"/>
+            <TextBox x:ConnectionId='10' x:Name="tbDuration" Text="{Binding StrBanDuration, Mode=TwoWay}" Height="76" Margin="8,0,0,0" Opacity="0" TextWrapping="Wrap" PlaceholderText="Eneter ban duration in days"/>
+            <Button x:ConnectionId='11' x:Name="bBan" Content="button" Command="{Binding BanClick}" HorizontalAlignment="Stretch" Height="45" Margin="0,0,218,0" Opacity="0" VerticalAlignment="Stretch"/>
+            <Button x:ConnectionId='12' x:Name="bRemove" Content="button" Command="{Binding RemoveClick}" HorizontalAlignment="Stretch" Height="45" Margin="0,0,217,0" Opacity="0" VerticalAlignment="Stretch"/>
         </StackPanel>
     </Grid>
 </Page>
