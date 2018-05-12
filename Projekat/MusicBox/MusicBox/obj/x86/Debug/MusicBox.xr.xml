@@ -8,7 +8,7 @@
     <RootPropertyPathName Name="SearchButtonClick" />
     <RootPropertyPathName Name="RegisterCommand" />
     <RootPropertyPathName Name="LoginAsGuestCommand" />
-    <RootPropertyPathName Name="LoginClicked" />
+    <RootPropertyPathName Name="LoginCommand" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="RemoveClick" />
     <RootPropertyPathName Name="BanClick" />

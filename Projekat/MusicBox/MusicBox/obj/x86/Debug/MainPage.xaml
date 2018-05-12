@@ -47,7 +47,7 @@
             <Button x:ConnectionId='3'  x:Name="loginButton" 
                      Content="Log in" HorizontalAlignment="Center" 
                      VerticalAlignment="Center" Height="50" Width="440" 
-                     Command="{Binding LoginClicked, Source={StaticResource loginModel}}" />
+                     Command="{Binding LoginCommand, Source={StaticResource loginModel}}" />
         </StackPanel>
         <StackPanel
                 Grid.Row="3"  

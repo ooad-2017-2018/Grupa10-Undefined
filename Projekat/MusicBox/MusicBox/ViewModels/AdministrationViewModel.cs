@@ -156,7 +156,7 @@ namespace MusicBox.ViewModels
                         retVal = dr.GetInt32(0);
                     }
                 }
-                dr.Close();
+                con.Close();
 
                 cmd = new SqlCommand(@"UPDATE USERS
                                      SET banned = 'TRUE'
@@ -196,7 +196,7 @@ namespace MusicBox.ViewModels
                         retVal = dr.GetInt32(0);
                     }
                 }
-                dr.Close();
+                con.Close();
 
                 cmd = new SqlCommand(@"DELETE
                                      FROM USERS 

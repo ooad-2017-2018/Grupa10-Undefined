@@ -16,6 +16,7 @@ namespace MusicBox.Models
         List<string> comments;
         List<float> ratings;
         float currRating;
+        string url;
 
         
         public int ID { get => id;}
@@ -25,7 +26,7 @@ namespace MusicBox.Models
         public List<string> Comments { get => comments; set => comments = value; }
         public List<float> Ratings { get => ratings; set => ratings = value; }
         public float CurrRating { get => currRating; set => currRating = value; }
-
+        public string Url { get => url; set => url = value; }
 
         public Song(string name, string genre, string desc)
         {
@@ -34,11 +35,5 @@ namespace MusicBox.Models
             Genre = genre;
             Description = desc;
         }
-
-    
-
-
-        
-
     }
 }

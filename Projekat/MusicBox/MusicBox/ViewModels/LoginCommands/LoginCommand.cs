@@ -23,7 +23,7 @@ namespace MusicBox.ViewModels.LoginCommands
 
         public void Execute(object parameter)
         {
-            this.ViewModel.Login();
+            this.ViewModel.LoginAsync();
         }
     }
 }

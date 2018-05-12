@@ -7,5 +7,11 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
+App.xbf
+MainPage.xbf
 MusicBox.xr.xml
+SearchButton.xbf
+Views\Administration.xbf
+Views\Administration_v2.xbf
+Views\Registration.xbf
 Properties\Default.rd.xml

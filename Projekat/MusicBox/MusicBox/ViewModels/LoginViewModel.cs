@@ -74,11 +74,12 @@ namespace MusicBox.ViewModels
             builder.InitialCatalog = "MusicBoxDB";
             _connectionString = builder.ConnectionString;
         }
-        async public void Login()
+        public async Task LoginAsync()
         {
             if(Username == "Admin" && Password == "TheBoss")
             {
                 _navigationService.Navigate(typeof(MusicBox.Views.Administration_v2));
+                return;
             }
             SqlConnection con = new SqlConnection(_connectionString);
             con.Open();
