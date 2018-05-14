@@ -26,10 +26,10 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
             <TextBlock  FontSize="25" Text="Name: " Margin="0,0,20,0" Width="200" />
-            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" 
+            <TextBox x:ConnectionId='9' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" 
                      Width= "300" x:Name="nameTextBox" Background="LightGray" Text="{Binding FirstName, Mode=TwoWay, Source={StaticResource registrationModel}}"/>
         </StackPanel>
-        <Button x:Name="backButton" Width="50" Height="50" HorizontalAlignment="Left" 
+        <Button x:ConnectionId='1' x:Name="backButton" Width="50" Height="50" HorizontalAlignment="Left" 
                 VerticalAlignment="Stretch" Content="Back" Grid.Row="0"
                 Command="{Binding BackCommand, Source={StaticResource registrationModel}}"/>
         <StackPanel Grid.Row="1"  
@@ -37,7 +37,7 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
             <TextBlock  FontSize="25" Text="Last name: " Width="200" Margin="0,0,20,0"/>
-            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+            <TextBox x:ConnectionId='8' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                      x:Name="surnameTextBox" Background="LightGray"
                      Text="{Binding LastName, Mode=TwoWay, Source={StaticResource registrationModel}}"/>
         </StackPanel>
@@ -46,7 +46,7 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
             <TextBlock  FontSize="25" Text="Username: " Width="200" Margin="0,0,20,0"/>
-            <TextBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+            <TextBox x:ConnectionId='7' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                      x:Name="usernameTextBox" Background="LightGray"
                      Text="{Binding Username, Mode=TwoWay, Source={StaticResource registrationModel}}"/>
         </StackPanel>
@@ -56,7 +56,7 @@
                     VerticalAlignment="Center" 
                     RenderTransformOrigin="0.465,0.654">
             <TextBlock  FontSize="25" Text="Password: " Width="200" Margin="0,0,20,0"/>
-            <PasswordBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+            <PasswordBox x:ConnectionId='6' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                      x:Name="passwordTextBox" Background="LightGray"
                      Password="{Binding Password, Mode=TwoWay, Source={StaticResource registrationModel}}"/>
         </StackPanel>
@@ -65,7 +65,7 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
             <TextBlock  FontSize="25" Text="Confirm Password: " Width="200" Margin="0,0,20,0"/>
-            <PasswordBox FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
+            <PasswordBox x:ConnectionId='5' FontSize="25" HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                      x:Name="confirmPasswordTextBox" Background="LightGray"
                      Password="{Binding ConfirmPassowrd, Mode=TwoWay, Source={StaticResource registrationModel}}"/>
         </StackPanel>
@@ -73,7 +73,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
-            <RichTextBlock Foreground="LightBlue"  Width="500" Height="300" FontSize="20" 
+            <RichTextBlock x:ConnectionId='4' Foreground="LightBlue"  Width="500" Height="300" FontSize="20" 
                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                            x:Name="agreementLicenceRichTextBox" />
         </StackPanel>
@@ -81,7 +81,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654" >
-            <CheckBox x:Name="agreementLicenceCheckBox" Width="40" 
+            <CheckBox x:ConnectionId='3' x:Name="agreementLicenceCheckBox" Width="40" 
                       Command="{Binding AgreementCheckCommand, Source={StaticResource registrationModel}}"/>
             <TextBlock Text="I Agree To The Terms And Conditions" Width="460" FontSize="25"/>
         </StackPanel>
@@ -89,9 +89,10 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" RenderTransformOrigin="0.465,0.654">
-            <Button x:Name="registerButton" Width="100" Height="30" Content="Register" 
+            <Button x:ConnectionId='2' x:Name="registerButton" Width="100" Height="30" Content="Register" 
                     Background="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Command="{Binding RegisterCommand, Source={StaticResource registrationModel}}"/>
         </StackPanel>
     </Grid>
 </Page>
+

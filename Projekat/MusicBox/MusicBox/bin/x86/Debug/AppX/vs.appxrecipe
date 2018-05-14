@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-12T14:13:12.130</Modified>
+      <Modified>2018-05-14T21:15:01.804</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.exe">
       <PackagePath>entrypoint\MusicBox.exe</PackagePath>
-      <Modified>2018-05-12T14:13:06.104</Modified>
+      <Modified>2018-05-14T21:15:00.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard1.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -575,7 +575,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\MusicBox.xr.xml">
       <PackagePath>MusicBox.xr.xml</PackagePath>
-      <Modified>2018-05-12T13:53:54.276</Modified>
+      <Modified>2018-05-14T21:14:59.918</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -591,7 +591,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-05-12T14:13:05.525</Modified>
+      <Modified>2018-05-14T21:14:59.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\Views\Administration_v2.xbf">
       <PackagePath>Views\Administration_v2.xbf</PackagePath>
@@ -599,7 +599,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\Views\Registration.xbf">
       <PackagePath>Views\Registration.xbf</PackagePath>
-      <Modified>2018-05-12T09:42:41.939</Modified>
+      <Modified>2018-05-14T21:13:16.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -612,7 +612,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\bin\x86\Debug\Core\MusicBox.exe">
       <PackagePath>MusicBox.exe</PackagePath>
-      <Modified>2018-05-12T14:13:12.118</Modified>
+      <Modified>2018-05-14T21:15:01.798</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,7 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
             <TextBlock  Text="Username: " FontSize="25" Margin="0,0,20,0"/>
-            <TextBox Text="{Binding Path=Username, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
+            <TextBox x:ConnectionId='5' Text="{Binding Path=Username, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
                      HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                      x:Name="usernameTextBox"/>
         </StackPanel>
@@ -35,7 +35,7 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
             <TextBlock  Text="Password: " FontSize="25" Margin="0,0,20,0" Width="117"/>
-            <PasswordBox  Password="{Binding Path=Password, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
+            <PasswordBox x:ConnectionId='4'  Password="{Binding Path=Password, Mode=TwoWay, Source={StaticResource loginModel}}" FontSize="25" 
                       HorizontalAlignment="Center" Margin="0,0,20,0" Width= "300" 
                       x:Name="passwordTextBox"/>
         </StackPanel>
@@ -44,7 +44,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button  x:Name="loginButton" 
+            <Button x:ConnectionId='3'  x:Name="loginButton" 
                      Content="Log in" HorizontalAlignment="Center" 
                      VerticalAlignment="Center" Height="50" Width="440" 
                      Command="{Binding LoginCommand, Source={StaticResource loginModel}}" />
@@ -54,7 +54,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="loginAsGuestButton" Content="Log in as guest" 
+            <Button x:ConnectionId='2' x:Name="loginAsGuestButton" Content="Log in as guest" 
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Height="50" Width="440" 
                     Command="{Binding LoginAsGuestCommand, Source={StaticResource loginModel}}"/>
@@ -65,7 +65,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
-            <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" 
+            <Button x:ConnectionId='1' x:Name="registerButton" Content="Register" HorizontalAlignment="Center" 
                     VerticalAlignment="Center" Height="50" Width="440" 
                     Command="{Binding RegisterCommand, Source={StaticResource loginModel}}"/>
         </StackPanel>
@@ -78,3 +78,4 @@
         </StackPanel>
     </Grid>
 </Page>
+
