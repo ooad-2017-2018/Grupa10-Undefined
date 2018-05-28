@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace MusicBox.Models
 {
-    public sealed class RegisteredUser : User
+    public class RegisteredUser : User
     {
         static int ID_COUNTER = 0;
         int id;

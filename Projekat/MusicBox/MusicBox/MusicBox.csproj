@@ -11,7 +11,7 @@
     <AssemblyName>MusicBox</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.14393.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -125,6 +125,9 @@
     <Compile Include="Views\Administration_v2.xaml.cs">
       <DependentUpon>Administration_v2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegisteredUser.xaml.cs">
+      <DependentUpon>RegisteredUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,7 @@
     <None Include="MusicBox_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\IconUser.png" />
     <Content Include="Assets\slika.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -164,6 +168,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Administration_v2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegisteredUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

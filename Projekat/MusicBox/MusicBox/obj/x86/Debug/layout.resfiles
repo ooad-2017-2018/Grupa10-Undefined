@@ -1,4 +1,5 @@
 WinMetadata\Windows.winmd
+Assets\IconUser.png
 Assets\LockScreenLogo.scale-200.png
 Assets\slika.png
 Assets\SplashScreen.scale-200.png
@@ -13,5 +14,6 @@ MusicBox.xr.xml
 SearchButton.xbf
 Views\Administration.xbf
 Views\Administration_v2.xbf
+Views\RegisteredUser.xbf
 Views\Registration.xbf
 Properties\Default.rd.xml

@@ -30949,24 +30949,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kuroi\\.nuget\\packages\\": {},
+    "C:\\Users\\Emir\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kuroi\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "projectUniqueName": "D:\\Fakultet\\OOAD\\PROJEKAT\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
       "projectName": "MusicBox",
-      "projectPath": "C:\\Users\\kuroi\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
-      "packagesPath": "C:\\Users\\kuroi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kuroi\\Desktop\\faks 4 semestar\\objektno orijentirana analiza i dizajn\\Projekat-OOAD\\novi\\Projekat\\MusicBox\\MusicBox\\obj\\",
+      "projectPath": "D:\\Fakultet\\OOAD\\PROJEKAT\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\MusicBox.csproj",
+      "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
+      "outputPath": "D:\\Fakultet\\OOAD\\PROJEKAT\\Grupa10-Undefined\\Projekat\\MusicBox\\MusicBox\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\kuroi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

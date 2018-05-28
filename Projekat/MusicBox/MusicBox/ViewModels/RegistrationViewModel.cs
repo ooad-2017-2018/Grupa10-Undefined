@@ -4,15 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MusicBox.Models;
+//using MusicBox.Models;
 using MusicBox.ViewModels.RegistrationCommands;
 using Windows.UI.Popups;
+
 
 namespace MusicBox.ViewModels
 {
     public class RegistrationViewModel
     {
-        RegisteredUser logedUser;
+        Models.RegisteredUser logedUser;
         string _connectionString;
         string firstName;
         string lastName;
@@ -26,7 +27,7 @@ namespace MusicBox.ViewModels
         public AgreementCheckCommand AgreementCheckCommand { get; set; }
         INavigationService navigationService;
         public RegistrationViewModel()
-        {
+        {            
             navigationService = new NavigationService();
             this.BackCommand = new BackCommand(this);
             this.RegisterCommand = new RegisterCommand(this);
@@ -60,7 +61,8 @@ namespace MusicBox.ViewModels
             {
                 if (Validate())
                 {
-                    logedUser = new RegisteredUser(Username, Password, FirstName, LastName);
+                    
+                    logedUser = new Models.RegisteredUser(Username, Password, FirstName, LastName);
                     cmd.CommandText = @"INSERT INTO USERS(ID, username, password, name, lastname, banned)
                                    VALUES (1, '" + logedUser.Username + "', '" + logedUser.Password + "', '" + logedUser.Name +
                                        "', '" + logedUser.LastName + "', '" + logedUser.Banned + "')";

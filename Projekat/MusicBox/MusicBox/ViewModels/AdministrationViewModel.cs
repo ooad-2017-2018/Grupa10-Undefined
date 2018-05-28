@@ -198,6 +198,8 @@ namespace MusicBox.ViewModels
                 }
                 con.Close();
 
+                con.Open();
+
                 cmd = new SqlCommand(@"DELETE
                                      FROM USERS 
                                      WHERE ID = " + retVal, con);

@@ -132,7 +132,7 @@ namespace MusicBox.MusicBox_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[20];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "MusicBox.SearchButton";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "String";
@@ -147,14 +147,15 @@ namespace MusicBox.MusicBox_XamlTypeInfo
             _typeNameTable[11] = "MusicBox.Models.User";
             _typeNameTable[12] = "MusicBox.MainPage";
             _typeNameTable[13] = "MusicBox.Views.Administration_v2";
-            _typeNameTable[14] = "MusicBox.ViewModels.RegistrationViewModel";
-            _typeNameTable[15] = "MusicBox.ViewModels.RegistrationCommands.BackCommand";
-            _typeNameTable[16] = "MusicBox.ViewModels.RegistrationCommands.RegisterCommand";
-            _typeNameTable[17] = "MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand";
-            _typeNameTable[18] = "Boolean";
-            _typeNameTable[19] = "MusicBox.Views.Registration";
+            _typeNameTable[14] = "MusicBox.Views.RegisteredUser";
+            _typeNameTable[15] = "MusicBox.ViewModels.RegistrationViewModel";
+            _typeNameTable[16] = "MusicBox.ViewModels.RegistrationCommands.BackCommand";
+            _typeNameTable[17] = "MusicBox.ViewModels.RegistrationCommands.RegisterCommand";
+            _typeNameTable[18] = "MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand";
+            _typeNameTable[19] = "Boolean";
+            _typeNameTable[20] = "MusicBox.Views.Registration";
 
-            _typeTable = new global::System.Type[20];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::MusicBox.SearchButton);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::System.String);
@@ -169,12 +170,13 @@ namespace MusicBox.MusicBox_XamlTypeInfo
             _typeTable[11] = typeof(global::MusicBox.Models.User);
             _typeTable[12] = typeof(global::MusicBox.MainPage);
             _typeTable[13] = typeof(global::MusicBox.Views.Administration_v2);
-            _typeTable[14] = typeof(global::MusicBox.ViewModels.RegistrationViewModel);
-            _typeTable[15] = typeof(global::MusicBox.ViewModels.RegistrationCommands.BackCommand);
-            _typeTable[16] = typeof(global::MusicBox.ViewModels.RegistrationCommands.RegisterCommand);
-            _typeTable[17] = typeof(global::MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand);
-            _typeTable[18] = typeof(global::System.Boolean);
-            _typeTable[19] = typeof(global::MusicBox.Views.Registration);
+            _typeTable[14] = typeof(global::MusicBox.Views.RegisteredUser);
+            _typeTable[15] = typeof(global::MusicBox.ViewModels.RegistrationViewModel);
+            _typeTable[16] = typeof(global::MusicBox.ViewModels.RegistrationCommands.BackCommand);
+            _typeTable[17] = typeof(global::MusicBox.ViewModels.RegistrationCommands.RegisterCommand);
+            _typeTable[18] = typeof(global::MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand);
+            _typeTable[19] = typeof(global::System.Boolean);
+            _typeTable[20] = typeof(global::MusicBox.Views.Registration);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -214,8 +216,9 @@ namespace MusicBox.MusicBox_XamlTypeInfo
         private object Activate_6_LoginViewModel() { return new global::MusicBox.ViewModels.LoginViewModel(); }
         private object Activate_12_MainPage() { return new global::MusicBox.MainPage(); }
         private object Activate_13_Administration_v2() { return new global::MusicBox.Views.Administration_v2(); }
-        private object Activate_14_RegistrationViewModel() { return new global::MusicBox.ViewModels.RegistrationViewModel(); }
-        private object Activate_19_Registration() { return new global::MusicBox.Views.Registration(); }
+        private object Activate_14_RegisteredUser() { return new global::MusicBox.Views.RegisteredUser(); }
+        private object Activate_15_RegistrationViewModel() { return new global::MusicBox.ViewModels.RegistrationViewModel(); }
+        private object Activate_20_Registration() { return new global::MusicBox.Views.Registration(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -320,9 +323,16 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  MusicBox.ViewModels.RegistrationViewModel
+            case 14:   //  MusicBox.Views.RegisteredUser
+                userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_RegisteredUser;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  MusicBox.ViewModels.RegistrationViewModel
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_14_RegistrationViewModel;
+                userType.Activator = Activate_15_RegistrationViewModel;
                 userType.AddMemberName("BackCommand");
                 userType.AddMemberName("RegisterCommand");
                 userType.AddMemberName("AgreementCheckCommand");
@@ -336,34 +346,34 @@ namespace MusicBox.MusicBox_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 15:   //  MusicBox.ViewModels.RegistrationCommands.BackCommand
+            case 16:   //  MusicBox.ViewModels.RegistrationCommands.BackCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  MusicBox.ViewModels.RegistrationCommands.RegisterCommand
+            case 17:   //  MusicBox.ViewModels.RegistrationCommands.RegisterCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand
+            case 18:   //  MusicBox.ViewModels.RegistrationCommands.AgreementCheckCommand
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Boolean
+            case 19:   //  Boolean
                 xamlType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  MusicBox.Views.Registration
+            case 20:   //  MusicBox.Views.Registration
                 userType = new global::MusicBox.MusicBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_Registration;
+                userType.Activator = Activate_20_Registration;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

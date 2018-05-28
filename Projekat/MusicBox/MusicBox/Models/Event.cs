@@ -40,7 +40,7 @@ namespace MusicBox.Models
         public string Name { get => name; }
         public string Description { get => description;}
         public DateTime EventDate { get => eventDate;}
-        public int Id { get => id;}
+        public int ID { get => id;}
         public Location Location { get => location;}
     }
 }

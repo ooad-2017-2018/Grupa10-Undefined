@@ -24,7 +24,7 @@ namespace MusicBox.Models
 
         public DateTime ExpirationDate { get => expirationDate;}
         public string ContentName { get => contentName;}
-        public int Id { get => id;}
+        public int ID { get => id;}
         public AdType AdType { get => adType;}
     }
 }

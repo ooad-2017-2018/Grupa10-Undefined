@@ -1,1 +1,1 @@
-C:\Users\kuroi\Desktop\faks 4 semestar\objektno orijentirana analiza i dizajn\Projekat-OOAD\novi\Projekat\MusicBox\MusicBox\MusicBox.csproj;x86
+D:\Fakultet\OOAD\PROJEKAT\Grupa10-Undefined\Projekat\MusicBox\MusicBox\MusicBox.csproj;x86

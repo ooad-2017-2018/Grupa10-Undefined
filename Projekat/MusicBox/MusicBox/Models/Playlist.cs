@@ -13,7 +13,7 @@ namespace MusicBox.Models
         string name;
         List<Song> songs;
 
-        public int Id { get => id;}
+        public int ID { get => id;}
         public string Name { get => name; set => name = value; }
         public List<Song> Songs { get => songs; set => songs = value; }
 
