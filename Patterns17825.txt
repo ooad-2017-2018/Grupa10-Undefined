@@ -1,0 +1,37 @@
+State patern ponasanja:
+-zaduzen je za prilagodavanje ponasanja na osnovu trenutnog stanja.
+-diamicka verzija strategy paterna
+-lokalizira svako stanje u posebnu klasu
+-cini kod preglednijim jer nije potrebno koristiti bespotrebne if uslove
+-s tim da podrzava Otvoren-Zatvoren princip cini dodatne nadogradnje laksim
+
+State patern u nasoj aplikaciji bi bio iskoristen kod slucaja razlicitog korisnika.
+Posto imaju obicni, reistrovani i VIP korisnici oni nemaju iste mogucnosti.
+Tako da ako se korisnik prijavi a nije VIP on ce se nalaziti u stanju RegistrovaniKorisnik i tako vazi i za druga dva stanja
+
+Mediator:
+-enkapsulira protokol za komunikaciju medju objektima dozvoljavajuci da objekti komuniciraju
+ bez medjusobnog poznavanja interne strukture objekta.
+ 
+Mediator bi u nasoj aplikaciji bio API koji omogucava frontend-u koristenje controlera 
+cija im je struktura nepoznata
+
+
+
+Observer:
+-uspostavlja relaciju izmedju objekata takvu da kad se stanje jednog objekta promijeni
+ svi zainteresirani objekti dobiju tu vijest.
+-Subject - instance ove klase neovisn omijenjaju svoje stanjei obavjestavaju Observers
+-IObserver – interfejs za Observer, sadrzi samo jenu metodu koja se poziva kada se promijeni stanje Subject instance
+-Observer - konkretna klasa koja obezbjedjuje konkretnu implementacijuza IObserver interfejs
+-Update - metoda koja formira interfejs izmedju klasa Subject i Observer
+-Notify - Event mehanizam za pozivanje update operacije za sve posamatrace ( Observers )
+   Nacin implementacije
+-Subject klasa sadrzi privatni dogadjaj (private event) Notify
+-Kada se njegovo stanje promijeni on aktivira dogadjaj(event) i salje svoje stanje kao parametar 
+ Update metodi (metoda mora bitiprije registrirana na Subject klasu). 
+-Moze biti vise razlicitih posmatraca sa svojim update metodama
+
+Observer patern bi ovdje mogao biti implementiran na nacin da kada se vrsi ban korisnika na neko vrijeme, on obavjestava
+one klase koje vode racuna o prijavi korisnika da bi mogli znati sta da rade kada se taj korisnik pokusa prijaviti na aplikaciju
+
