@@ -81,19 +81,24 @@ namespace MusicBox.ViewModels
                 _navigationService.Navigate(typeof(MusicBox.Views.Administration_v2));
                 return;
             }
-            SqlConnection con = new SqlConnection(_connectionString);
+            
+           /* SqlConnection con = new SqlConnection(_connectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand(@"SELECT u.id
-                                              FROM User u
+                                              FROM USERS u
                                               WHERE u.username = '" + Username + "' AND u.password = '" + Password + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+           if (dr.HasRows)
             {
                 while (dr.Read())
                 {
                     id = int.Parse(dr.GetString(0));
                     var dialog = new MessageDialog("Obisni Login!");
                     await dialog.ShowAsync();
+                    loggedUser = new RegisteredUser("dummyUsername", "dummyPw", "dummyN", "dummyLN");
+
+                    _navigationService.Navigate(typeof(MusicBox.Views.RegisteredUser));
+                    return;
                 }
             }
             if(id == -1)
@@ -102,6 +107,12 @@ namespace MusicBox.ViewModels
                 await dialog.ShowAsync();
             }
             con.Close();
+            
+            */
+            loggedUser = new RegisteredUser("dummyUsername", "dummyPw", "dummyN", "dummyLN");
+
+            _navigationService.Navigate(typeof(Views.RegisteredUser), loggedUser);
+            return;
         }
         public void Register()
         {

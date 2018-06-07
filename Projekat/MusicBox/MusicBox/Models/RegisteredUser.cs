@@ -9,7 +9,7 @@ namespace MusicBox.Models
 {
     public class RegisteredUser : User
     {
-        static int ID_COUNTER = 0;
+        static int ID_COUNTER = 10;
         int id;
         string name;
         string lastName;

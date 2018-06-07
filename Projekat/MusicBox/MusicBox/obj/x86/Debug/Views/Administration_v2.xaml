@@ -69,7 +69,7 @@
                                 <Thickness>10,343,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
-                        <Setter Target="tbDuration.(TextBox.Text)" Value="Enter ban duration in days..."/>
+                        <Setter Target="tbDuration.(TextBox.Text)" Value=""/>
                         <Setter Target="tbDuration.(FrameworkElement.Margin)">
                             <Setter.Value>
                                 <Thickness>-1,0,12,0</Thickness>
@@ -179,7 +179,7 @@
                                 <Thickness>488,0,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
-                        <Setter Target="tbDuration.(TextBox.Text)" Value="Enter ban duration in days..."/>
+                        <Setter Target="tbDuration.(TextBox.Text)" Value=""/>
                         <Setter Target="tbDuration.(FrameworkElement.Margin)">
                             <Setter.Value>
                                 <Thickness>-1,0,12,0</Thickness>
@@ -285,7 +285,7 @@
                                 <Thickness>836,0,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
-                        <Setter Target="tbDuration.(TextBox.Text)" Value="Enter ban duration in days..."/>
+                        <Setter Target="tbDuration.(TextBox.Text)" Value=""/>
                         <Setter Target="tbDuration.(FrameworkElement.Margin)">
                             <Setter.Value>
                                 <Thickness>-1,0,12,0</Thickness>

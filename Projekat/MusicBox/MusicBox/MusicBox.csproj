@@ -11,8 +11,8 @@
     <AssemblyName>MusicBox</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -100,6 +100,7 @@
     <Compile Include="ViewModels\LoginCommands\LoginAsGuestCommand.cs" />
     <Compile Include="ViewModels\LoginCommands\LoginCommand.cs" />
     <Compile Include="ViewModels\LoginCommands\RegisterCommand.cs" />
+    <Compile Include="ViewModels\RegisteredUserViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
     <Compile Include="ViewModels\RegistrationCommands\AgreementCheckCommand.cs" />
     <Compile Include="ViewModels\RegistrationCommands\BackCommand.cs" />
@@ -181,6 +182,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Apis.YouTube.v3">
+      <Version>1.33.1.1226</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.4</Version>
     </PackageReference>
@@ -190,8 +194,14 @@
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1</Version>
     </PackageReference>
+    <PackageReference Include="MyToolkit.Extended">
+      <Version>2.5.16</Version>
+    </PackageReference>
     <PackageReference Include="System.Data.SqlClient">
       <Version>4.4.3</Version>
+    </PackageReference>
+    <PackageReference Include="YoutubeSearch.dll">
+      <Version>1.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

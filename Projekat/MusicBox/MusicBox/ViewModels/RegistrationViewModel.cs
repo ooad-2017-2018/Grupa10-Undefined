@@ -52,6 +52,7 @@ namespace MusicBox.ViewModels
             SqlCommand cmd = new SqlCommand(@"SELECT u.id FROM USERS u
                                               WHERE u.username = '" + Username + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
+            
             if (dr.HasRows)
             {
                 var dialog = new MessageDialog("Username u upotrebi");
@@ -59,13 +60,15 @@ namespace MusicBox.ViewModels
             }
             else
             {
+                dr.Close();
                 if (Validate())
                 {
                     
                     logedUser = new Models.RegisteredUser(Username, Password, FirstName, LastName);
                     cmd.CommandText = @"INSERT INTO USERS(ID, username, password, name, lastname, banned)
-                                   VALUES (1, '" + logedUser.Username + "', '" + logedUser.Password + "', '" + logedUser.Name +
+                                   VALUES (" + logedUser.ID + ", '" + logedUser.Username + "', '" + logedUser.Password + "', '" + logedUser.Name +
                                        "', '" + logedUser.LastName + "', '" + logedUser.Banned + "')";
+                    cmd.ExecuteNonQuery();
                     var dialog = new MessageDialog("Korisnik je registrovan!");
                     await dialog.ShowAsync();
                     navigationService.Navigate(typeof(MusicBox.MainPage));

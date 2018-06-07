@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#FF1098EA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
                 <VisualState x:ConnectionId='2' x:Name="Phone"/>
@@ -16,16 +20,16 @@
                 <VisualState x:ConnectionId='4' x:Name="Desktop"/>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Pivot Margin="32,111,73,169" Title="">
+        <Pivot Margin="32,111,73,169" Title="" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch">
             <PivotItem Header="Search" Background="#FF1098EA" BorderBrush="Black">
                 <Grid>
-                    <TextBox x:ConnectionId='6' x:Name="textBox" HorizontalAlignment="Left" Height="39" Margin="0,21,0,0" TextWrapping="Wrap" PlaceholderText="Enter text to search"  VerticalAlignment="Top" Width="233" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="Black" Grid.ColumnSpan="2"/>
-                    <RadioButton x:ConnectionId='7' x:Name="rbSongs" Content="Songs" HorizontalAlignment="Left" Height="50" Margin="10,141,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2" IsChecked="True"/>
-                    <RadioButton x:ConnectionId='8' x:Name="rbUsers" Content="Users" HorizontalAlignment="Left" Height="50" Margin="10,190,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2"/>
-                    <Button Content="Search" HorizontalAlignment="Left" Height="39" Margin="0,76,0,0" VerticalAlignment="Top" Width="156" Background="#334231B3" BorderBrush="#FF0E0E0E" Grid.ColumnSpan="2"/>
+                    <TextBox x:ConnectionId='8' x:Name="searchTextBox" Text="{Binding SearchSubstring, Mode=TwoWay}" HorizontalAlignment="Left" Height="39" Margin="0,21,0,0" TextWrapping="Wrap" PlaceholderText="Enter text to search"  VerticalAlignment="Top" Width="233" RenderTransformOrigin="0.5,0.5" Background="White" Foreground="Black" Grid.ColumnSpan="2"/>
+                    <RadioButton x:ConnectionId='9' x:Name="rbSongs" Content="Songs" HorizontalAlignment="Left" Height="50" Margin="10,141,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2" IsChecked="True"/>
+                    <RadioButton x:ConnectionId='10' x:Name="rbUsers" Content="Users" HorizontalAlignment="Left" Height="50" Margin="10,190,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2"/>
+                    <Button Content="Search" Command="{Binding SearchClick}" HorizontalAlignment="Left" Height="39" Margin="0,76,0,0" VerticalAlignment="Top" Width="156" Background="#334231B3" BorderBrush="#FF0E0E0E" Grid.ColumnSpan="2"/>
                     <Ellipse Fill="Black" HorizontalAlignment="Left" Height="334" Margin="254,21,0,0" Stroke="Black" VerticalAlignment="Top" Width="3" Opacity="0.6"/>
                     <StackPanel HorizontalAlignment="Left" Height="334" Margin="292,21,0,0" VerticalAlignment="Top" Width="834" BorderBrush="Black" BorderThickness="1" >
-                        <ListView x:ConnectionId='9' x:Name="listSearchResults" Height="304" Margin="7,0,23,0"/>
+                        <ListView x:ConnectionId='11' x:Name="listSearchResults" ItemsSource="{Binding SearchResults, Mode=TwoWay}" DisplayMemberPath="Title" Height="304" Margin="7,0,23,0"/>
                     </StackPanel>
 
                 </Grid>
@@ -35,7 +39,8 @@
             </PivotItem>
         </Pivot>
         <Button x:ConnectionId='5' x:Name="bMyProfile" Content="My profile" HorizontalAlignment="Left" Height="51" Margin="959,38,0,0" VerticalAlignment="Top" Width="222" Background="#FF1A83DF" BorderBrush="Black"/>
-        <MediaPlayerElement AreTransportControlsEnabled="True" HorizontalAlignment="Left" Height="137" Margin="46,556,0,0" VerticalAlignment="Top" Width="823"/>
+        <MediaPlayerElement x:ConnectionId='6' x:Name="mPlayer"                                     AreTransportControlsEnabled="True" HorizontalAlignment="Left" Height="137" Margin="46,218.333,0,0" VerticalAlignment="Top" Width="823" Grid.Row="1"/>
+        <Button x:ConnectionId='7' x:Name="logOutButton" Content="Log Out"                            HorizontalAlignment="Left" Height="51" Margin="959,111,0,0" VerticalAlignment="Top" Width="222" Background="#FF1A83DF" BorderBrush="Black"/>
 
     </Grid>
 </Page>
